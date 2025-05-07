@@ -23,12 +23,224 @@
             border-bottom: 2px solid #ddd;
             padding-bottom: 0.5rem;
         }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .job-category {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: #2563eb;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .job-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .job-item {
+            background-color: #f8fafc;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-title {
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-desc {
+            font-size: 0.95rem;
+            color: #4b5563;
+        }
     </style>
 </head>
 
 <body>
     <h1>哪些工种容易被AI替代？</h1>
-    <!-- 内容将在此添加 -->
+
+    <p>从长远来看，AI的进步可能导致绝大多数现有工种被部分或完全替代。短期内，最先受到冲击的将是那些具有以下特点的工作：基础性、重复性、标准化程度高的工作。AI在处理有固定流程、重复性高、决策逻辑清晰的任务方面具有天然优势。</p>
+
+    <div class="job-category">
+        <h2>服务行业</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">基础导游</div>
+                <div class="job-desc">AI可以提供标准化的景点介绍、路线规划和语言翻译服务。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">行政助理/文秘</div>
+                <div class="job-desc">日程安排、邮件处理、文件归档、会议记录等任务可以被AI高效完成。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">客服（部分缩减）</div>
+                <div class="job-desc">AI聊天机器人可以处理大量常见问题和标准化咨询，人工客服将更专注于复杂和情感化的问题。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">收银员</div>
+                <div class="job-desc">自动收银系统和无人商店技术已经逐渐普及。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>创意行业</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">基础原画师</div>
+                <div class="job-desc">AI在图像生成方面的能力（例如Stable Diffusion, Midjourney）可以大幅提高基础原画的生产效率，甚至直接生成部分成品。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">广告文案（基础）</div>
+                <div class="job-desc">AI可以根据关键词和目标受众快速生成多种版本的广告语和描述性文本。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">基础视频剪辑</div>
+                <div class="job-desc">简单的素材拼接、字幕添加、音效匹配等任务可以由AI自动完成。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>教育行业</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">基础课程的老师/阅卷</div>
+                <div class="job-desc">对于知识点明确、答案标准化的教学内容和考试，AI可以承担部分教学和阅卷工作。例如，AI可以批改选择题、填空题，甚至对简答题进行初步评估。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>物流仓储</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">库管/物流分拣</div>
+                <div class="job-desc">自动化仓库管理系统和分拣机器人能显著提升效率和准确性。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>金融行业</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">基础财务分析</div>
+                <div class="job-desc">AI可以快速处理大量财务数据，进行报表生成、趋势分析等基础工作。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">风险评估（初级）</div>
+                <div class="job-desc">在金融、保险等领域，AI可以通过分析数据模型进行初步的风险评估。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>医疗行业</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">医学影像基础分析</div>
+                <div class="job-desc">AI在识别X光片、CT扫描等医学影像中的异常模式方面已展现出巨大潜力，可以辅助医生进行初步筛查。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>数据与分析</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">基础数据分析</div>
+                <div class="job-desc">AI能够高效处理和分析大规模数据集，提取初步洞察。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>法律行业</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">合同审核（标准化条款）</div>
+                <div class="job-desc">AI可以快速审查合同中的标准化条款，识别潜在风险和不一致之处。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">法律助理</div>
+                <div class="job-desc">法律文献检索、案例整理等辅助性工作可由AI完成。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">AI法官（特定类型案件）</div>
+                <div class="job-desc">对于事实清晰、法律条文明确的简单案件，AI或可辅助进行判决。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>语言服务</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">基础的笔译</div>
+                <div class="job-desc">机器翻译在处理结构化文本和常用语境方面已达到较高水平，未来将进一步压缩人工笔译的需求，尤其是基础性翻译。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>公共服务</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">交通指挥（部分）</div>
+                <div class="job-desc">智能交通系统可以利用AI进行流量分析和信号灯控制，减少对人工指挥的依赖。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">政务（流程化部分）</div>
+                <div class="job-desc">标准化的政务审批流程、信息录入等环节可以由AI系统处理。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>制造业</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">流水线工人</div>
+                <div class="job-desc">工业机器人（例如波士顿动力公司的Helix机器人所代表的技术方向）早已在制造业中广泛应用，未来将更加智能化和普及化。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">质检员</div>
+                <div class="job-desc">基于机器视觉的AI质检系统可以更高效、更精确地发现产品缺陷。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>餐饮业</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">基础厨师</div>
+                <div class="job-desc">烹饪机器人已经出现，能够完成标准化的菜品制作。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>农业</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">传统农民</div>
+                <div class="job-desc">自动化农业机械、精准农业技术（如无人机播种、施肥、病虫害监测）将大幅减少对传统农业劳动力的需求。</div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

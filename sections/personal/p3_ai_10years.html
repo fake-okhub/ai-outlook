@@ -23,12 +23,83 @@
             border-bottom: 2px solid #ddd;
             padding-bottom: 0.5rem;
         }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .prediction-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .prediction-item {
+            background-color: #f5f3ff;
+            border-left: 4px solid #8b5cf6;
+            padding: 1.5rem;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .prediction-title {
+            font-weight: 600;
+            color: #6d28d9;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prediction-desc {
+            color: #4b5563;
+        }
+
+        .timeline-header {
+            color: #6d28d9;
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
     </style>
 </head>
 
 <body>
     <h1>10年以内AI发展推演（至2035年）</h1>
-    <!-- 内容将在此添加 -->
+
+    <p>未来十年，AI将从以下几个方面深刻影响社会：</p>
+
+    <div class="prediction-list">
+        <div class="prediction-item">
+            <div class="prediction-title">效率大幅提升</div>
+            <div class="prediction-desc">各行各业将通过引入AI技术实现生产力、运营效率和服务质量的显著提升。自动化流程将更加普及。</div>
+        </div>
+
+        <div class="prediction-item">
+            <div class="prediction-title">基础岗位消失或减少</div>
+            <div class="prediction-desc">大量重复性、标准化的基础岗位将面临被AI取代的风险，导致相关从业人员需要转型。</div>
+        </div>
+
+        <div class="prediction-item">
+            <div class="prediction-title">新兴职业的崛起</div>
+            <div class="prediction-desc">"AI训练师"、"AI应用开发者"、"AI伦理师"、"数据标注师"等与AI直接相关的职业将快速增长。</div>
+        </div>
+
+        <div class="prediction-item">
+            <div class="prediction-title">教育体系的变革</div>
+            <div class="prediction-desc">教育将更加注重培养学生的个性化学习能力、创造力、批判性思维和情商（EQ），以适应AI时代对人才的新要求。终身学习将成为常态。</div>
+        </div>
+
+        <div class="prediction-item">
+            <div class="prediction-title">医疗领域的革新与健康管理的进步</div>
+            <div class="prediction-desc">AI将在新药研发、疾病诊断（尤其是早期筛查）、个性化治疗方案制定、智能健康监测等方面发挥巨大作用，提升医疗水平和普惠性。</div>
+        </div>
+
+        <div class="prediction-item">
+            <div class="prediction-title">低技能劳动者面临失业潮</div>
+            <div class="prediction-desc">技能结构单一、适应能力较弱的低技能劳动者可能面临大规模失业的风险，对社会保障体系和再就业培训提出严峻挑战。</div>
+        </div>
+    </div>
 </body>
 
 </html>

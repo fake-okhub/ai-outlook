@@ -23,12 +23,117 @@
             border-bottom: 2px solid #ddd;
             padding-bottom: 0.5rem;
         }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            color: #0f766e;
+            font-size: 1.6rem;
+            margin: 2.5rem 0 1.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+
+        .prediction-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .prediction-item {
+            background-color: #ecfeff;
+            border-left: 4px solid #0e7490;
+            padding: 1.5rem;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .risk-item {
+            background-color: #e0f2fe;
+            border-left: 4px solid #0369a1;
+            padding: 1.5rem;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .prediction-title {
+            font-weight: 600;
+            color: #0e7490;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .risk-title {
+            font-weight: 600;
+            color: #0369a1;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prediction-desc,
+        .risk-desc {
+            color: #4b5563;
+        }
     </style>
 </head>
 
 <body>
     <h1>50年以内AI发展推演（至2075年）</h1>
-    <!-- 内容将在此添加 -->
+
+    <p>展望2075年，AGI（通用人工智能）的出现或将成为可能，这将对人类社会产生颠覆性影响：</p>
+
+    <h2 class="section-title">主要发展方向</h2>
+    <div class="prediction-list">
+        <div class="prediction-item">
+            <div class="prediction-title">AGI（通用人工智能）的潜在突破</div>
+            <div class="prediction-desc">
+                AGI指的是具备与人类相当甚至超越人类的通用认知能力的AI。若AGI实现，它将能够进行自主学习、理解复杂概念、进行创造性思考，并可能从根本上重构人类社会的组织方式和发展轨迹（"helix"可能指其螺旋式上升的自我进化能力或对DNA双螺旋结构般基础性事物的重构）。
+            </div>
+        </div>
+
+        <div class="prediction-item">
+            <div class="prediction-title">人机共生（脑机接口、生物合成）</div>
+            <div class="prediction-desc">
+                脑机接口技术可能取得重大突破，实现人脑与AI系统更直接、更高效的信息交互，甚至融合。生物合成技术的发展也可能与AI结合，创造出新的生命形态或对现有生物进行改造，模糊生物与机器的界限。</div>
+        </div>
+
+        <div class="prediction-item">
+            <div class="prediction-title">社会价值观的重塑</div>
+            <div class="prediction-desc">
+                随着生产力的极大解放和人类角色的转变，现有的社会价值观（如对工作的重视、财富的分配方式等）可能受到巨大冲击并发生重塑。休闲、创造、精神追求可能成为新的价值核心。</div>
+        </div>
+
+        <div class="prediction-item">
+            <div class="prediction-title">人类生存方式的根本改变</div>
+            <div class="prediction-desc">在高度自动化的社会，物质生产可能极大丰富，从"稀缺经济"走向"丰盈经济"。人类的工作时间可能大幅缩短，甚至不再以传统意义上的"工作"为生。</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">潜在的巨大风险与挑战</h2>
+    <div class="prediction-list">
+        <div class="risk-item">
+            <div class="risk-title">大规模结构性失业和社会动荡</div>
+            <div class="risk-desc">如果AGI的到来未能伴随有效的社会调整机制，可能会导致更大范围的失业，加剧社会矛盾和动荡。</div>
+        </div>
+
+        <div class="risk-item">
+            <div class="risk-title">技术垄断和不平等加剧</div>
+            <div class="risk-desc">AGI的研发和控制权可能高度集中在少数国家或大型科技公司手中，导致前所未有的技术垄断和贫富差距。</div>
+        </div>
+
+        <div class="risk-item">
+            <div class="risk-title">自主军事武器的伦理危机</div>
+            <div class="risk-desc">具备自主决策能力的AI武器系统（"杀手机器人"）一旦失控或被滥用，将对全球安全构成严重威胁。</div>
+        </div>
+
+        <div class="risk-item">
+            <div class="risk-title">人类身份认同危机</div>
+            <div class="risk-desc">当AI在智力、创造力等多个方面超越人类时，人类可能会面临深刻的身份认同危机——"我们是谁？我们的价值何在？"</div>
+        </div>
+    </div>
 </body>
 
 </html>

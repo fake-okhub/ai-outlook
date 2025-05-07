@@ -14,6 +14,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+            background-color: #f9fafb;
         }
 
         h1 {
@@ -23,12 +24,206 @@
             border-bottom: 2px solid #ddd;
             padding-bottom: 0.5rem;
         }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .society-intro {
+            margin-bottom: 2rem;
+        }
+
+        .tier-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .tier {
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tier:hover {
+            transform: translateY(-5px);
+        }
+
+        .tier-1 {
+            background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
+            border-left: 8px solid #f59e0b;
+        }
+
+        .tier-2 {
+            background: linear-gradient(135deg, #e0f2fe 0%, #7dd3fc 100%);
+            border-left: 8px solid #0284c7;
+        }
+
+        .tier-3 {
+            background: linear-gradient(135deg, #f3f4f6 0%, #d1d5db 100%);
+            border-left: 8px solid #6b7280;
+        }
+
+        .tier-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .tier-1 .tier-title {
+            color: #92400e;
+        }
+
+        .tier-2 .tier-title {
+            color: #0c4a6e;
+        }
+
+        .tier-3 .tier-title {
+            color: #1f2937;
+        }
+
+        .tier-icon {
+            margin-right: 0.75rem;
+            font-size: 1.8rem;
+        }
+
+        .tier-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .tier-section {
+            margin-bottom: 1rem;
+        }
+
+        .tier-section-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .tier-section-content {
+            line-height: 1.7;
+        }
+
+        .tier-1 .tier-section-title {
+            color: #92400e;
+        }
+
+        .tier-2 .tier-section-title {
+            color: #0c4a6e;
+        }
+
+        .tier-3 .tier-section-title {
+            color: #1f2937;
+        }
+
+        .ubi-section {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 8px solid #10b981;
+            margin-top: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .ubi-title {
+            color: #065f46;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .ubi-content {
+            color: #374151;
+            line-height: 1.7;
+        }
     </style>
 </head>
 
 <body>
     <h1>50年后的人类社会设想</h1>
-    <!-- 内容将在此添加 -->
+
+    <div class="society-intro">
+        <p>基于上述推演，50年后的社会结构可能发生剧变，呈现出一种分化形态，甚至出现所谓的"三层世界"：</p>
+    </div>
+
+    <div class="tier-container">
+        <div class="tier tier-1">
+            <div class="tier-title">
+                <span class="tier-icon">☀️</span>
+                第一层："天堂" - "神级"存在
+            </div>
+            <div class="tier-content">
+                <div class="tier-section">
+                    <div class="tier-section-title">构成</div>
+                    <div class="tier-section-content">
+                        创造并掌控最顶尖AI（可能是AGI或超级智能）的极少数超级精英。
+                    </div>
+                </div>
+                <div class="tier-section">
+                    <div class="tier-section-title">特征</div>
+                    <div class="tier-section-content">
+                        他们可能掌握着社会绝大部分的财富和权力，数量可能仅占总人口的万分之一或更少。他们的能力和生活方式可能远超普通人想象，接近于传统观念中的"神"。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tier tier-2">
+            <div class="tier-title">
+                <span class="tier-icon">🌍</span>
+                第二层："人间" - "管理者与协作者"
+            </div>
+            <div class="tier-content">
+                <div class="tier-section">
+                    <div class="tier-section-title">构成</div>
+                    <div class="tier-section-content">
+                        能够与高级AI有效协作，从事跨学科、复杂技术研发、社会管理和创新工作的精英阶层。
+                    </div>
+                </div>
+                <div class="tier-section">
+                    <div class="tier-section-title">特征</div>
+                    <div class="tier-section-content">
+                        他们是维持社会运转和持续创新的核心力量，可能占据总人口的百分之一左右。他们需要具备高度的适应能力、学习能力和跨界整合能力。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tier tier-3">
+            <div class="tier-title">
+                <span class="tier-icon">🏙️</span>
+                第三层："地狱" (或"凡尘") - "被供养者"
+            </div>
+            <div class="tier-content">
+                <div class="tier-section">
+                    <div class="tier-section-title">构成</div>
+                    <div class="tier-section-content">
+                        其他绝大多数人口。
+                    </div>
+                </div>
+                <div class="tier-section">
+                    <div class="tier-section-title">特征</div>
+                    <div class="tier-section-content">
+                        由于大部分工作被AI取代，他们可能依赖于某种形式的"全民基本收入"（UBI）或社会福利维持生活。物质生活可能因为生产力的极大发展而得到保障（物产极大丰富），例如通过合成生物学制造食物和材料，黑灯工厂/无人工厂实现全自动化生产，无人驾驶普及，智慧城市提供高效便捷的生活服务。然而，他们可能面临精神空虚、目标感缺失等问题。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ubi-section">
+        <div class="ubi-title">全民基本收入（UBI - Universal Basic Income）</div>
+        <div class="ubi-content">
+            在这种社会结构下，UBI可能成为一项必要的社会政策，旨在为所有公民提供无条件的、定期的基本生活保障，以应对AI带来的大规模失业和维持社会稳定。
+        </div>
+    </div>
 </body>
 
 </html>

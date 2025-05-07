@@ -14,6 +14,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+            background-color: #f8fafc;
         }
 
         h1 {
@@ -23,12 +24,318 @@
             border-bottom: 2px solid #ddd;
             padding-bottom: 0.5rem;
         }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .challenges-intro {
+            margin-bottom: 2rem;
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .challenge-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .challenge-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ef4444, #f97316);
+        }
+
+        .challenge-content {
+            padding: 1.5rem;
+        }
+
+        .challenge-title {
+            color: #dc2626;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .challenge-icon {
+            margin-right: 0.75rem;
+            font-size: 1.5rem;
+        }
+
+        .challenge-description {
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .difficulty-indicator {
+            display: flex;
+            margin-top: 1.25rem;
+            justify-content: flex-end;
+        }
+
+        .difficulty-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #f97316;
+            margin: 0 2px;
+            opacity: 0.3;
+        }
+
+        .difficulty-dot.active {
+            opacity: 1;
+        }
+
+        .header-graphic {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .header-title {
+            color: #b91c1c;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .header-description {
+            color: #7f1d1d;
+            max-width: 80%;
+        }
     </style>
 </head>
 
 <body>
     <h1>人类离AGI还有多远？—— 通往AGI之路的挑战</h1>
-    <!-- 内容将在此添加 -->
+
+    <div class="header-graphic">
+        <div class="header-text">
+            <div class="header-title">通往AGI的漫长之路</div>
+            <div class="header-description">实现真正意义上的通用人工智能（AGI）仍然面临诸多重大挑战，需要在以下关键领域取得突破：</div>
+        </div>
+    </div>
+
+    <div class="challenges-grid">
+        <div class="challenge-card">
+            <div class="challenge-content">
+                <div class="challenge-title">
+                    <span class="challenge-icon">🧠</span>
+                    深度学习的局限与突破
+                </div>
+                <div class="challenge-description">
+                    当前深度学习在特定任务上表现优异，但依赖大量标注数据，泛化能力有限，且"黑箱"特性使其决策过程难以理解。需要新的理论和方法来克服这些局限。
+                </div>
+                <div class="difficulty-indicator">
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-content">
+                <div class="challenge-title">
+                    <span class="challenge-icon">🔄</span>
+                    通用性与泛化能力
+                </div>
+                <div class="challenge-description">
+                    AGI需要具备在不同领域、不同任务之间进行知识迁移和灵活应用的能力，而不是仅仅在训练过的特定领域表现良好。
+                </div>
+                <div class="difficulty-indicator">
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-content">
+                <div class="challenge-title">
+                    <span class="challenge-icon">⚡</span>
+                    小样本学习与高效推理
+                </div>
+                <div class="challenge-description">
+                    人类可以从极少量样本中学习并进行有效推理，目前AI在这方面能力较弱，需要更高效的学习算法和推理机制。
+                </div>
+                <div class="difficulty-indicator">
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-content">
+                <div class="challenge-title">
+                    <span class="challenge-icon">🌐</span>
+                    理解常识知识
+                </div>
+                <div class="challenge-description">
+                    AI缺乏人类社会普遍拥有的背景知识和常识，这限制了其对复杂情境的理解和判断能力。构建和赋予AI常识知识库是一个巨大挑战。
+                </div>
+                <div class="difficulty-indicator">
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-content">
+                <div class="challenge-title">
+                    <span class="challenge-icon">⛓️</span>
+                    因果推理能力
+                </div>
+                <div class="challenge-description">
+                    当前AI主要依赖相关性进行预测，而AGI需要具备理解事物之间因果关系的能力，从而进行更深层次的分析和预测。
+                </div>
+                <div class="difficulty-indicator">
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-content">
+                <div class="challenge-title">
+                    <span class="challenge-icon">🧿</span>
+                    自我意识与主观体验
+                </div>
+                <div class="challenge-description">
+                    AGI是否以及如何产生自我意识、情感和主观体验，是哲学和科学上的巨大难题，也是AGI研究的前沿。
+                </div>
+                <div class="difficulty-indicator">
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-content">
+                <div class="challenge-title">
+                    <span class="challenge-icon">👁️</span>
+                    多模态感知与整合
+                </div>
+                <div class="challenge-description">
+                    AGI需要像人类一样能够同时处理和整合来自视觉、听觉、触觉、语言等多种模态的信息，并形成统一的认知。
+                </div>
+                <div class="difficulty-indicator">
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot"></div>
+                    <div class="difficulty-dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-content">
+                <div class="challenge-title">
+                    <span class="challenge-icon">⚙️</span>
+                    能量效率与计算资源
+                </div>
+                <div class="challenge-description">
+                    当前训练大型AI模型需要巨大的计算资源和能源消耗，实现AGI可能需要更高效的算法和硬件架构。
+                </div>
+                <div class="difficulty-indicator">
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot"></div>
+                    <div class="difficulty-dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-content">
+                <div class="challenge-title">
+                    <span class="challenge-icon">⚖️</span>
+                    伦理与安全可控
+                </div>
+                <div class="challenge-description">
+                    如何确保AGI的目标与人类价值观对齐，防止其产生不可预料的有害行为，是AGI发展中至关重要的伦理和安全问题。
+                </div>
+                <div class="difficulty-indicator">
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-content">
+                <div class="challenge-title">
+                    <span class="challenge-icon">🔍</span>
+                    可解释性与透明度
+                </div>
+                <div class="challenge-description">
+                    AGI的决策过程需要是可理解、可解释的，以便人类能够信任并有效监管它。解决AI的"黑箱"问题对于构建负责任的AGI至关重要。
+                </div>
+                <div class="difficulty-indicator">
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot active"></div>
+                    <div class="difficulty-dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

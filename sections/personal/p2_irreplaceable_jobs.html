@@ -23,12 +23,137 @@
             border-bottom: 2px solid #ddd;
             padding-bottom: 0.5rem;
         }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .job-category {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: #15803d;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .job-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .job-item {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-title {
+            font-weight: 600;
+            color: #166534;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-desc {
+            font-size: 0.95rem;
+            color: #4b5563;
+        }
     </style>
 </head>
 
 <body>
     <h1>哪些工种不容易被AI替代？</h1>
-    <!-- 内容将在此添加 -->
+
+    <p>尽管AI能力强大，但某些依赖人类特有素质的工作在可预见的未来仍难以被完全替代。这些工作核心依赖创造力、共情力、复杂决策、灵活应变能力以及高级感官（尤其是触觉）。</p>
+
+    <div class="job-category">
+        <h2>教育领域</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">教师（尤其是涉及心理疏导和情感陪伴的角色）</div>
+                <div class="job-desc">AI可以作为教学辅助工具，但教师在激发学生学习兴趣、培养批判性思维、进行情感交流和个性化辅导方面的作用难以替代。尤其是在K12教育和心理健康领域。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">幼教</div>
+                <div class="job-desc">幼儿教育高度依赖情感互动、肢体接触和对幼儿非语言信号的理解，这些是目前AI难以胜任的。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>AI相关专业</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">AI的应用开发、维修维护、伦理监管</div>
+                <div class="job-desc">AI本身的发展和应用催生了新的职业需求，包括设计和训练AI模型、确保AI系统的正常运行、以及制定和执行AI伦理规范和法律法规的专业人士。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">程序员 + AI（人机协作）</div>
+                <div class="job-desc">AI可以辅助编程（如GitHub Copilot,
+                    Cursor等工具号称能以1:4-5的比例提升效率），但复杂的系统设计、架构、创新性算法开发以及对AI生成代码的审查和优化仍需高级程序员。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>心理健康</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">跨学科心理咨询师</div>
+                <div class="job-desc">结合心理学与AI技术的专业人士，能够更好地理解和应对AI发展带来的社会心理问题。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>创意与艺术</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">顶尖艺术家、作家、音乐家</div>
+                <div class="job-desc">AI可以作为创作工具，辅助生成初步想法或素材，但顶尖的原创性、情感深度和思想内涵仍源于人类创作者。AI的介入更多是提升效率和拓展创作边界。</div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">自媒体（核心创意与人格魅力驱动）</div>
+                <div class="job-desc">虽然AI可以辅助内容生成和运营，但成功的自媒体往往依赖于创作者独特的个人魅力、观点和与粉丝的情感连接。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>应急与救援</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">消防员、应急救援人员</div>
+                <div class="job-desc">这类工作需要在复杂、危险且不可预测的环境中快速做出判断和行动，并涉及复杂的物理操作和团队协作。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>企业与创业</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">创业家/企业家</div>
+                <div class="job-desc">识别市场机会、整合资源、承担风险、建立和领导团队等核心能力难以被AI复制。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-category">
+        <h2>医疗领域</h2>
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-title">复杂手术医生</div>
+                <div class="job-desc">虽然手术机器人已在应用，但顶尖外科医生在应对突发状况、进行精细操作和做出关键决策方面的经验和判断力至关重要。AI更多是作为辅助工具提升手术精度和微创性。</div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
