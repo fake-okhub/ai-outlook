@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI与数据资产</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+
+        .section-title {
+            background: linear-gradient(90deg, #3b82f6, #6366f1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .content-card {
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .media-placeholder {
+            background-color: #f3f4f6;
+            border: 2px dashed #d1d5db;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px;
+            color: #6b7280;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .media-placeholder:hover {
+            background-color: #e5e7eb;
+            border-color: #9ca3af;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.75rem;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+
+        .data-quality-meter {
+            height: 1.5rem;
+            border-radius: 0.75rem;
+            transition: width 1s ease-in-out;
+        }
+
+        .progress-bar {
+            height: 0.75rem;
+            border-radius: 0.375rem;
+            transition: width 1s ease-in-out;
+        }
+
+        .maturity-indicator {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            margin: 0 auto 0.5rem;
+        }
+    </style>
+</head>
+
+<body class="p-6 md:p-8">
+    <header class="mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold section-title mb-2">AI与企业数据资产：打造智能化基础</h1>
+        <p class="text-lg text-gray-600">数据是AI的燃料，而高质量的企业数据资产是实现AI价值最大化的关键。</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto">
+        <div class="highlight-box p-5 mb-10">
+            <h2 class="text-xl font-bold text-gray-800 mb-2"><i
+                    class="fas fa-database mr-2 text-blue-500"></i>数据资产：AI成功的关键基础</h2>
+            <p>许多企业在AI项目中失败，不是因为AI技术本身，而是因为基础数据资产的质量和准备不足。本节将指导您如何评估、整理和提升企业数据资产，为AI应用打下坚实基础。</p>
+        </div>
+
+        <!-- 数据资产评估 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">企业数据资产现状评估</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="content-card p-6 bg-white">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4"><i
+                            class="fas fa-chart-line text-purple-600 mr-2"></i>数据成熟度模型</h3>
+                    <p class="mb-6">评估您的企业当前处于哪个数据成熟度阶段，以制定相应的数据战略：</p>
+
+                    <div class="space-y-6">
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <div class="maturity-indicator bg-red-500">1</div>
+                            <h4 class="text-center font-semibold mb-2">初始阶段</h4>
+                            <ul class="text-sm list-disc pl-5 space-y-1">
+                                <li>数据分散在不同系统和部门</li>
+                                <li>缺乏统一数据标准和管理</li>
+                                <li>数据质量参差不齐</li>
+                                <li>依赖手动数据处理</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <div class="maturity-indicator bg-yellow-500">2</div>
+                            <h4 class="text-center font-semibold mb-2">发展阶段</h4>
+                            <ul class="text-sm list-disc pl-5 space-y-1">
+                                <li>建立了部分数据集中存储</li>
+                                <li>有基本数据清洗流程</li>
+                                <li>开始数据标准化工作</li>
+                                <li>数据分析仍以报表为主</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <div class="maturity-indicator bg-blue-500">3</div>
+                            <h4 class="text-center font-semibold mb-2">规范阶段</h4>
+                            <ul class="text-sm list-disc pl-5 space-y-1">
+                                <li>统一的数据存储和管理平台</li>
+                                <li>自动化数据质量控制</li>
+                                <li>完善的数据治理框架</li>
+                                <li>数据分析能力显著提升</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <div class="maturity-indicator bg-green-500">4</div>
+                            <h4 class="text-center font-semibold mb-2">优化阶段</h4>
+                            <ul class="text-sm list-disc pl-5 space-y-1">
+                                <li>企业数据作为战略资产管理</li>
+                                <li>高质量的结构化和非结构化数据</li>
+                                <li>完善的数据安全和隐私保护</li>
+                                <li>数据驱动的决策文化</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card p-6 bg-white">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4"><i
+                            class="fas fa-clipboard-check text-green-600 mr-2"></i>企业数据资产自评清单</h3>
+                    <p class="mb-4">使用以下评估清单来判断企业数据资产的准备程度：</p>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-700 mb-3">1. 数据可访问性</h4>
+                        <div class="mb-3">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">重要业务数据是否易于获取？</span>
+                                <span class="text-sm font-medium text-blue-600">65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="progress-bar w-[65%] bg-blue-500"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">是否有统一的数据访问流程？</span>
+                                <span class="text-sm font-medium text-blue-600">45%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="progress-bar w-[45%] bg-blue-500"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-700 mb-3">2. 数据质量</h4>
+                        <div class="mb-3">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">数据准确性</span>
+                                <span class="text-sm font-medium text-blue-600">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="progress-bar w-[70%] bg-blue-500"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">数据完整性</span>
+                                <span class="text-sm font-medium text-blue-600">55%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="progress-bar w-[55%] bg-blue-500"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">数据一致性</span>
+                                <span class="text-sm font-medium text-blue-600">40%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="progress-bar w-[40%] bg-blue-500"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-700 mb-3">3. 数据集成度</h4>
+                        <div class="mb-3">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">跨系统数据整合程度</span>
+                                <span class="text-sm font-medium text-blue-600">35%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="progress-bar w-[35%] bg-blue-500"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-3">4. 数据治理</h4>
+                        <div class="mb-3">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">是否有数据管理规范？</span>
+                                <span class="text-sm font-medium text-blue-600">50%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="progress-bar w-[50%] bg-blue-500"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">数据安全与隐私保护</span>
+                                <span class="text-sm font-medium text-blue-600">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="progress-bar w-[75%] bg-blue-500"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-placeholder mb-8" onclick="editMediaUrl(this, 'image')">
+                <i class="fas fa-image text-4xl mb-2"></i>
+                <p>点击添加图片URL</p>
+                <p class="text-sm">(建议：展示数据成熟度模型或数据评估框架图)</p>
+            </div>
+        </section>
+
+        <!-- AI所需的关键数据类型 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">AI应用所需的关键数据类型</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="content-card p-6 bg-gradient-to-br from-blue-50 to-indigo-50">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-user-friends text-3xl text-blue-500 mr-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">客户数据</h3>
+                    </div>
+                    <ul class="list-disc pl-6 space-y-2 mb-4">
+                        <li><strong>客户画像</strong>：人口统计、行为偏好、购买历史</li>
+                        <li><strong>互动记录</strong>：客服对话、反馈评价、社交互动</li>
+                        <li><strong>使用数据</strong>：产品使用模式、访问路径、停留时间</li>
+                    </ul>
+                    <p class="text-sm text-gray-600"><i
+                            class="fas fa-lightbulb text-yellow-500 mr-1"></i>适用场景：个性化推荐、客户流失预测、精准营销</p>
+                </div>
+
+                <div class="content-card p-6 bg-gradient-to-br from-green-50 to-emerald-50">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cogs text-3xl text-green-500 mr-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">运营数据</h3>
+                    </div>
+                    <ul class="list-disc pl-6 space-y-2 mb-4">
+                        <li><strong>销售数据</strong>：交易记录、销售漏斗、转化率</li>
+                        <li><strong>库存管理</strong>：库存水平、周转率、供应链数据</li>
+                        <li><strong>生产数据</strong>：设备状态、质量检测、生产效率</li>
+                    </ul>
+                    <p class="text-sm text-gray-600"><i
+                            class="fas fa-lightbulb text-yellow-500 mr-1"></i>适用场景：需求预测、异常检测、预防性维护</p>
+                </div>
+
+                <div class="content-card p-6 bg-gradient-to-br from-purple-50 to-pink-50">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-file-alt text-3xl text-purple-500 mr-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">非结构化数据</h3>
+                    </div>
+                    <ul class="list-disc pl-6 space-y-2 mb-4">
+                        <li><strong>文本文档</strong>：合同、报告、产品手册、客户问答</li>
+                        <li><strong>图片视频</strong>：产品图片、检测视频、宣传素材</li>
+                        <li><strong>外部数据</strong>：行业报告、竞争情报、社交媒体</li>
+                    </ul>
+                    <p class="text-sm text-gray-600"><i
+                            class="fas fa-lightbulb text-yellow-500 mr-1"></i>适用场景：智能客服、自动内容生成、视觉识别</p>
+                </div>
+            </div>
+
+            <div class="content-card p-6 bg-white mb-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4"><i
+                        class="fas fa-exclamation-triangle text-amber-500 mr-2"></i>常见数据挑战与解决方案</h3>
+
+                <div class="overflow-auto">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="border border-gray-200 p-3 text-left">常见挑战</th>
+                                <th class="border border-gray-200 p-3 text-left">影响</th>
+                                <th class="border border-gray-200 p-3 text-left">解决方案</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-200 p-3"><strong>数据孤岛</strong><br>数据分散在不同系统</td>
+                                <td class="border border-gray-200 p-3">无法获得全面视图，AI训练数据不完整</td>
+                                <td class="border border-gray-200 p-3">
+                                    <ul class="list-disc pl-4 text-sm">
+                                        <li>建立数据湖或数据仓库</li>
+                                        <li>实施API集成战略</li>
+                                        <li>使用ETL工具统一数据</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 p-3"><strong>数据质量问题</strong><br>不准确、缺失、重复数据</td>
+                                <td class="border border-gray-200 p-3">AI模型训练效果差，"垃圾进，垃圾出"</td>
+                                <td class="border border-gray-200 p-3">
+                                    <ul class="list-disc pl-4 text-sm">
+                                        <li>实施数据清洗流程</li>
+                                        <li>设立数据验证规则</li>
+                                        <li>建立数据质量监控</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 p-3"><strong>缺乏标准化</strong><br>不一致的数据格式和定义</td>
+                                <td class="border border-gray-200 p-3">增加数据处理复杂性，降低AI准确性</td>
+                                <td class="border border-gray-200 p-3">
+                                    <ul class="list-disc pl-4 text-sm">
+                                        <li>制定统一数据标准</li>
+                                        <li>建立主数据管理</li>
+                                        <li>实施数据转换规则</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 p-3"><strong>数据隐私合规</strong><br>数据使用的合规风险</td>
+                                <td class="border border-gray-200 p-3">违规风险，限制AI应用场景</td>
+                                <td class="border border-gray-200 p-3">
+                                    <ul class="list-disc pl-4 text-sm">
+                                        <li>实施数据匿名化</li>
+                                        <li>建立隐私保护框架</li>
+                                        <li>获取合规使用授权</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="media-placeholder" onclick="editMediaUrl(this, 'image')">
+                <i class="fas fa-image text-4xl mb-2"></i>
+                <p>点击添加图片URL</p>
+                <p class="text-sm">(建议：展示企业数据流图或数据整合架构图)</p>
+            </div>
+        </section>
+
+        <!-- 数据准备行动计划 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">AI数据准备行动计划</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <div class="content-card p-6 bg-white mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">短期行动（1-3个月）</h3>
+                        <ol class="list-decimal pl-6 space-y-3">
+                            <li>
+                                <strong>数据资产梳理</strong>
+                                <p class="text-sm text-gray-600 mt-1">识别企业内部所有数据源，建立数据资产清单，明确数据责任人。</p>
+                            </li>
+                            <li>
+                                <strong>关键数据质量评估</strong>
+                                <p class="text-sm text-gray-600 mt-1">对优先级高的数据集进行质量评估，识别主要问题和改进机会。</p>
+                            </li>
+                            <li>
+                                <strong>制定数据治理规范</strong>
+                                <p class="text-sm text-gray-600 mt-1">建立数据管理和使用规范，确保数据操作合规且安全。</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="content-card p-6 bg-white">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">中期行动（3-6个月）</h3>
+                        <ol class="list-decimal pl-6 space-y-3">
+                            <li>
+                                <strong>数据清洗与标准化</strong>
+                                <p class="text-sm text-gray-600 mt-1">对关键业务数据进行清洗、去重和标准化处理，提升数据质量。</p>
+                            </li>
+                            <li>
+                                <strong>构建统一数据平台</strong>
+                                <p class="text-sm text-gray-600 mt-1">根据企业规模选择适合的数据仓库或数据湖解决方案，打破数据孤岛。</p>
+                            </li>
+                            <li>
+                                <strong>建立数据管道</strong>
+                                <p class="text-sm text-gray-600 mt-1">实现数据的自动化采集、处理和存储流程，减少手动操作。</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="content-card p-6 bg-white mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">长期行动（6-12个月）</h3>
+                        <ol class="list-decimal pl-6 space-y-3">
+                            <li>
+                                <strong>高级数据分析能力建设</strong>
+                                <p class="text-sm text-gray-600 mt-1">培养团队的数据分析技能，引入数据科学人才，为AI应用做准备。</p>
+                            </li>
+                            <li>
+                                <strong>数据价值变现</strong>
+                                <p class="text-sm text-gray-600 mt-1">将整理后的高质量数据用于训练AI模型，实现业务价值。</p>
+                            </li>
+                            <li>
+                                <strong>建立数据驱动文化</strong>
+                                <p class="text-sm text-gray-600 mt-1">促进全公司范围内基于数据的决策习惯，支持AI创新。</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-blue-100 to-indigo-100 rounded-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">投资回报预期</h3>
+                        <p class="mb-4">数据质量每提升10%，可带来的业务价值：</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-chart-line text-green-500 mr-2"></i>
+                                <span>AI模型准确率提升15-25%</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-clock text-green-500 mr-2"></i>
+                                <span>数据分析时间减少30-40%</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-search text-green-500 mr-2"></i>
+                                <span>业务洞察质量提升20-35%</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-money-bill-wave text-green-500 mr-2"></i>
+                                <span>决策相关成本降低10-20%</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 p-3 bg-white rounded-lg">
+                            <p class="text-sm text-gray-800">
+                                <i class="fas fa-quote-left text-blue-400 mr-1"></i>
+                                根据Gartner研究，高质量数据能帮助企业降低35%的运营成本，并提高15-20%的收入。
+                                <i class="fas fa-quote-right text-blue-400 ml-1"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-placeholder" onclick="editMediaUrl(this, 'video')">
+                <i class="fas fa-video text-4xl mb-2"></i>
+                <p>点击添加视频URL</p>
+                <p class="text-sm">(建议：企业数据准备与治理的实践案例视频)</p>
+            </div>
+        </section>
+
+        <!-- 成功案例 -->
+        <section>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">数据转型成功案例</h2>
+
+            <div class="content-card p-6 bg-white mb-8">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-shopping-cart text-xl text-amber-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">某零售连锁企业</h3>
+                        <p class="text-gray-500 text-sm">从数据混乱到AI驱动决策</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-gray-700 mb-2">起始状态</h4>
+                        <ul class="text-sm list-disc pl-5 space-y-1">
+                            <li>100+门店数据存储在不同系统</li>
+                            <li>产品数据不一致，库存信息滞后</li>
+                            <li>无法实现跨渠道客户识别</li>
+                            <li>数据分析依赖月度报表，滞后严重</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-gray-700 mb-2">采取措施</h4>
+                        <ul class="text-sm list-disc pl-5 space-y-1">
+                            <li>构建统一数据湖，整合全渠道数据</li>
+                            <li>建立统一产品主数据管理系统</li>
+                            <li>实施客户统一ID体系</li>
+                            <li>引入自动化数据治理工具</li>
+                            <li>设立跨部门数据治理委员会</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-gray-700 mb-2">成果</h4>
+                        <ul class="text-sm list-disc pl-5 space-y-1">
+                            <li>数据准备时间减少85%</li>
+                            <li>库存精确度提升到97%</li>
+                            <li>AI需求预测准确率达92%</li>
+                            <li>个性化推荐转化率提升35%</li>
+                            <li>运营决策时间从天级缩短到小时级</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                    <p class="italic text-gray-700">
+                        "数据质量是我们AI转型的基础。我们花了6个月时间梳理和治理数据，这让后续的AI应用实施变得异常顺利。数据治理投资看似间接，实际上它是决定AI项目成败的关键因素。"
+                    </p>
+                    <p class="text-right mt-2 font-medium">— 该零售集团CIO</p>
+                </div>
+            </div>
+
+            <div class="highlight-box p-5">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">核心启示</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>数据战略先行</strong> — 在AI项目启动前，先投入资源进行数据治理和准备</li>
+                    <li><strong>循序渐进</strong> — 从高优先级业务数据开始，逐步扩展到全企业范围</li>
+                    <li><strong>技术与流程并重</strong> — 数据工具固然重要，但数据管理流程和数据文化同样关键</li>
+                    <li><strong>长期投入</strong> — 数据资产建设是持续过程，而非一次性项目</li>
+                    <li><strong>统一视图</strong> — 打破数据孤岛，建立单一数据真相源，是AI成功的前提</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 进度条动画
+        document.addEventListener('DOMContentLoaded', function () {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 300);
+            });
+        });
+
+        // 编辑媒体URL的功能
+        function editMediaUrl(element, type) {
+            const url = prompt(`请输入${type === 'image' ? '图片' : '视频'}URL：`);
+            if (url && url.trim() !== '') {
+                if (type === 'image') {
+                    element.innerHTML = `<img src="${url}" alt="用户添加的图片" class="w-full h-auto rounded-lg">`;
+                } else if (type === 'video') {
+                    element.innerHTML = `<iframe src="${url}" frameborder="0" allowfullscreen class="w-full h-64 md:h-96 rounded-lg"></iframe>`;
+                }
+                element.classList.remove('media-placeholder');
+                element.removeAttribute('onclick');
+            }
+        }
+    </script>
+</body>
+
+</html>

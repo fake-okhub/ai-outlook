@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI未来五年展望 - 企业降本增效路线图</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: white;
+            color: #334155;
+        }
+
+        .timeline-container {
+            position: relative;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 24px;
+            width: 4px;
+            background: linear-gradient(to bottom, #3b82f6, #8b5cf6, #ec4899);
+            z-index: 1;
+        }
+
+        .timeline-item {
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 12px;
+            transform: translateX(-50%);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            color: white;
+            z-index: 3;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.125rem 0.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .badge-blue {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge-purple {
+            background-color: #ede9fe;
+            color: #5b21b6;
+        }
+
+        .badge-pink {
+            background-color: #fce7f3;
+            color: #9d174d;
+        }
+
+        .badge-orange {
+            background-color: #ffedd5;
+            color: #9a3412;
+        }
+
+        .badge-green {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge-red {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .difficulty-meter {
+            display: inline-block;
+            margin-left: 0.5rem;
+        }
+
+        .difficulty-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 2px;
+        }
+
+        .dot-filled {
+            background-color: currentColor;
+        }
+
+        .dot-empty {
+            background-color: #e5e7eb;
+        }
+    </style>
+</head>
+
+<body class="p-6">
+    <header class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-3">
+            <i class="fas fa-calendar-alt text-blue-600 mr-2"></i>AI未来五年展望
+        </h1>
+        <p class="text-xl text-gray-600 border-l-4 border-blue-500 pl-3">企业降本增效路线图与方案预演</p>
+    </header>
+
+    <section class="mb-8">
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border border-blue-100 mb-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-3">通向未来的战略规划</h2>
+            <p class="mb-3">
+                随着人工智能技术的快速演进，企业必须制定有序且前瞻性的AI应用路线图，在不同时间节点上选择合适的技术解决方案，实现最大化的降本增效。本路线图基于当前AI技术发展趋势，为企业规划未来1-5年的AI应用策略，提供具体的实施方向和解决方案类型。
+            </p>
+            <p>无论您的企业规模大小和技术储备如何，都可以根据自身情况，选择合适的切入点和实施路径，逐步深化AI应用，构建企业的数字化智能未来。</p>
+        </div>
+    </section>
+
+    <div class="timeline-container pl-12 mb-10">
+        <!-- 近期阶段 1-2年 -->
+        <div class="timeline-item mb-12">
+            <div class="timeline-icon bg-blue-500">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="bg-gradient-to-r from-blue-600 to-blue-400 py-4 px-6">
+                    <h2 class="text-2xl font-bold text-white flex items-center">
+                        <span>近期（1-2年）：</span>
+                        <span class="ml-2 text-xl">快速见效与基础赋能</span>
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">典型应用场景</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-start">
+                                    <span class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-headset"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">AI客服</h4>
+                                        <p class="text-gray-600 text-sm">基于大语言模型的客服机器人，24/7响应客户咨询</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-start">
+                                    <span class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-edit"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">AI营销内容初稿</h4>
+                                        <p class="text-gray-600 text-sm">产品文案、推广文章、社媒帖子的AI辅助创作</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-start">
+                                    <span class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-robot"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">RPA流程自动化</h4>
+                                        <p class="text-gray-600 text-sm">表单处理、数据录入、报表生成等重复性工作自动化</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-start">
+                                    <span class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-book"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">内部文档智能问答</h4>
+                                        <p class="text-gray-600 text-sm">员工手册、产品资料库的AI检索与智能解答</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">预期影响</h3>
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                            <p class="mb-2"><i
+                                    class="fas fa-arrow-down text-green-600 mr-2"></i><strong>显著降低重复性工作的人力成本</strong>：减少20-40%的人工处理时间
+                            </p>
+                            <p class="mb-2"><i
+                                    class="fas fa-tachometer-alt text-blue-600 mr-2"></i><strong>提升响应速度和内容生产效率</strong>：客户响应时间缩短50%以上
+                            </p>
+                            <p><i
+                                    class="fas fa-smile text-yellow-600 mr-2"></i><strong>改善员工和客户体验</strong>：减轻员工繁重工作，提高客户满意度
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">解决方案类型</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                                <h4 class="font-semibold text-lg mb-2 text-blue-700">
+                                    <i class="fas fa-plug mr-2"></i>无/低代码方案
+                                </h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>成熟SaaS AI工具</strong>：ChatGPT、Midjourney、Notion AI</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>无代码AI平台</strong>：Coze、FlowGPT、SiteGPT、Zapier</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>企业平台AI助手</strong>：企业微信、钉钉、飞书的AI功能</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-3 text-sm">
+                                    <span class="badge badge-blue">开发难度</span>
+                                    <span class="difficulty-meter text-blue-600">
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                    </span>
+                                </div>
+                                <div class="mt-1 text-sm">
+                                    <span class="badge badge-green">上手难度</span>
+                                    <span class="difficulty-meter text-green-600">
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                                <h4 class="font-semibold text-lg mb-2 text-blue-700">
+                                    <i class="fas fa-code mr-2"></i>需编程方案
+                                </h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>AI API集成</strong>：OpenAI API、智谱AI、百度文心API</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>开源模型部署</strong>：LangChain、LlamaIndex、FastAPI</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>RPA开发</strong>：UiPath、Python自动化脚本</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-3 text-sm">
+                                    <span class="badge badge-blue">开发难度</span>
+                                    <span class="difficulty-meter text-blue-600">
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                    </span>
+                                </div>
+                                <div class="mt-1 text-sm">
+                                    <span class="badge badge-green">上手难度</span>
+                                    <span class="difficulty-meter text-green-600">
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold text-blue-800 mb-2"><i class="fas fa-lightbulb mr-2"></i>阶段建议
+                        </h3>
+                        <p class="text-gray-700">
+                            近期阶段应聚焦于快速试点和易于实施的AI应用，以最小成本探索AI价值，积累数据和经验。无代码/低代码解决方案是大多数企业的理想起点，可在几周内实现价值。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 中期阶段 2-3年 -->
+        <div class="timeline-item mb-12">
+            <div class="timeline-icon bg-purple-600">
+                <i class="fas fa-sync-alt"></i>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="bg-gradient-to-r from-purple-600 to-purple-400 py-4 px-6">
+                    <h2 class="text-2xl font-bold text-white flex items-center">
+                        <span>中期（2-3年）：</span>
+                        <span class="ml-2 text-xl">深度集成与流程重塑</span>
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">典型应用场景</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-start">
+                                    <span class="bg-purple-100 text-purple-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-bullseye"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">AI驱动的个性化营销</h4>
+                                        <p class="text-gray-600 text-sm">全渠道个性化内容生成与投放优化策略</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-start">
+                                    <span class="bg-purple-100 text-purple-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-truck"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">供应链智能优化</h4>
+                                        <p class="text-gray-600 text-sm">库存预测、配送路线优化、采购策略智能调整</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-start">
+                                    <span class="bg-purple-100 text-purple-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-microscope"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">AI辅助研发</h4>
+                                        <p class="text-gray-600 text-sm">产品设计辅助、代码生成、智能测试自动化</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-start">
+                                    <span class="bg-purple-100 text-purple-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-video"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">AI数字人直播</h4>
+                                        <p class="text-gray-600 text-sm">品牌数字化形象，实时多媒体内容生产与互动</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow col-span-1 md:col-span-2">
+                                <div class="flex items-start">
+                                    <span class="bg-purple-100 text-purple-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-database"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">企业级"微型ERP"初步成型</h4>
+                                        <p class="text-gray-600 text-sm">多维表格+AI自动化，实现销售、采购、库存等核心业务流程的集成化管理</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">预期影响</h3>
+                        <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                            <p class="mb-2"><i
+                                    class="fas fa-chart-line text-green-600 mr-2"></i><strong>核心业务流程效率大幅提升</strong>：关键流程效率提升30-60%
+                            </p>
+                            <p class="mb-2"><i
+                                    class="fas fa-brain text-purple-600 mr-2"></i><strong>数据驱动决策能力增强</strong>：基于AI的预测准确率提高20-30%
+                            </p>
+                            <p><i
+                                    class="fas fa-rocket text-red-600 mr-2"></i><strong>开始探索新的业务增长点</strong>：通过AI驱动的创新模式找到新的利润来源
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">解决方案类型</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                                <h4 class="font-semibold text-lg mb-2 text-purple-700">
+                                    <i class="fas fa-plug mr-2"></i>无/低代码方案
+                                </h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>行业AI解决方案</strong>：垂直行业SaaS+AI产品</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>AI+数据分析平台</strong>：智能BI工具、预测分析平台</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>多维表格+AI自动化</strong>：飞书/金山等多维表格+AI</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-3 text-sm">
+                                    <span class="badge badge-purple">开发难度</span>
+                                    <span class="difficulty-meter text-purple-600">
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                    </span>
+                                </div>
+                                <div class="mt-1 text-sm">
+                                    <span class="badge badge-green">上手难度</span>
+                                    <span class="difficulty-meter text-green-600">
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                                <h4 class="font-semibold text-lg mb-2 text-purple-700">
+                                    <i class="fas fa-code mr-2"></i>需编程方案
+                                </h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>AI PaaS平台</strong>：系统化定制大模型应用开发</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>API集成大模型</strong>：企业内部系统与大模型的深度集成</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>企业数据+大模型</strong>：私有化部署的企业知识库</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-3 text-sm">
+                                    <span class="badge badge-purple">开发难度</span>
+                                    <span class="difficulty-meter text-purple-600">
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                    </span>
+                                </div>
+                                <div class="mt-1 text-sm">
+                                    <span class="badge badge-green">上手难度</span>
+                                    <span class="difficulty-meter text-green-600">
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-filled"></span>
+                                        <span class="difficulty-dot dot-empty"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold text-purple-800 mb-2"><i class="fas fa-lightbulb mr-2"></i>阶段建议
+                        </h3>
+                        <p class="text-gray-700">
+                            中期阶段应基于早期经验，开始AI系统深度集成与流程重塑，需要更多的技术投入和跨部门协作。考虑组建专业AI团队或引入外部顾问，规划更全面的AI战略转型。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 远期阶段 3-5年 -->
+        <div class="timeline-item">
+            <div class="timeline-icon bg-pink-600">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="bg-gradient-to-r from-pink-600 to-pink-400 py-4 px-6">
+                    <h2 class="text-2xl font-bold text-white flex items-center">
+                        <span>远期（3-5年）：</span>
+                        <span class="ml-2 text-xl">智能自主与模式创新</span>
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">典型应用场景</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-start">
+                                    <span class="bg-pink-100 text-pink-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-robot"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">AI Agent自主完成复杂业务流程</h4>
+                                        <p class="text-gray-600 text-sm">自主运行的AI系统完成从策划到执行的全流程</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-start">
+                                    <span class="bg-pink-100 text-pink-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">AI驱动新产品/服务创新</h4>
+                                        <p class="text-gray-600 text-sm">基于大规模市场分析的创新产品设计和服务</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-start">
+                                    <span class="bg-pink-100 text-pink-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-user-circle"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">高度个性化的员工与客户体验</h4>
+                                        <p class="text-gray-600 text-sm">动态适应个人需求的工作环境和客户服务</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-start">
+                                    <span class="bg-pink-100 text-pink-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-cogs"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">企业运营的AI原生化</h4>
+                                        <p class="text-gray-600 text-sm">AI作为企业核心决策与执行系统的基础架构</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow col-span-1 md:col-span-2">
+                                <div class="flex items-start">
+                                    <span class="bg-pink-100 text-pink-800 p-2 rounded-full mr-3">
+                                        <i class="fas fa-globe"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">AI辅助出海战略全面实施</h4>
+                                        <p class="text-gray-600 text-sm">全自动本地化、文化适应、市场拓展的AI赋能全球化战略</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">预期影响</h3>
+                        <div class="bg-pink-50 p-4 rounded-lg border-l-4 border-pink-500">
+                            <p class="mb-2"><i
+                                    class="fas fa-sync-alt text-purple-600 mr-2"></i><strong>可能带来颠覆性的商业模式和组织结构变革</strong>：彻底改变企业组织形态与运作方式
+                            </p>
+                            <p class="mb-2"><i
+                                    class="fas fa-trophy text-yellow-600 mr-2"></i><strong>企业竞争力全面跃升</strong>：AI原生企业的运营效率可能是传统企业的数倍
+                            </p>
+                            <p><i
+                                    class="fas fa-globe-americas text-blue-600 mr-2"></i><strong>全球化扩张加速</strong>：AI消除语言和文化壁垒，降低全球化门槛
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">解决方案类型</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                                <h4 class="font-semibold text-lg mb-2 text-pink-700">
+                                    <i class="fas fa-plug mr-2"></i>无/低代码方案
+                                </h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>高级企业AI平台</strong>：第三代企业智能化平台</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>AI治理与管理工具</strong>：AI系统监管与优化平台</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span><strong>无代码AI Agent平台</strong>：可视化智能体配置与部署</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-3 text-sm">
+                                    <span class="badge badge-pink">开发难度</span

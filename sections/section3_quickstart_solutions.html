@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人人可用的AI方案</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+
+        .section-title {
+            background: linear-gradient(90deg, #3b82f6, #6366f1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .solution-card {
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .media-placeholder {
+            background-color: #f3f4f6;
+            border: 2px dashed #d1d5db;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px;
+            color: #6b7280;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .media-placeholder:hover {
+            background-color: #e5e7eb;
+            border-color: #9ca3af;
+        }
+
+        .difficulty-indicator {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .difficulty-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 3px;
+        }
+
+        .dot-filled {
+            background-color: currentColor;
+        }
+
+        .dot-empty {
+            background-color: transparent;
+            border: 1px solid currentColor;
+        }
+
+        .step-card {
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .feature-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+
+        .comparison-table th {
+            background-color: #f3f4f6;
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+
+<body class="p-6 md:p-8">
+    <header class="mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold section-title mb-2">人人可用的AI方案：从无代码平台到智能体</h1>
+        <p class="text-lg text-gray-600">AI不再是技术专家的专利，现在任何人都能快速上手并创造价值。</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto">
+        <div class="highlight-box p-5 mb-10">
+            <h2 class="text-xl font-bold text-gray-800 mb-2"><i
+                    class="fas fa-lightbulb mr-2 text-yellow-500"></i>打破AI应用的技术壁垒</h2>
+            <p>现代AI工具已大幅降低使用门槛，不需要编程背景，普通业务人员也能快速搭建和部署针对特定场景的AI应用。以下解决方案根据技术复杂度由低到高排列，适合不同技术水平的用户。</p>
+        </div>
+
+        <!-- 主要解决方案分类 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">四类快速可用的AI解决方案</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <!-- 无代码/低代码AI平台 -->
+                <div class="solution-card p-6 bg-gradient-to-br from-blue-50 to-blue-100 border-t-4 border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-puzzle-piece text-3xl text-blue-500 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">无代码/低代码AI平台</h3>
+                            <div class="difficulty-indicator text-blue-500 mt-1">
+                                <span class="difficulty-dot dot-filled"></span>
+                                <span class="difficulty-dot dot-empty"></span>
+                                <span class="difficulty-dot dot-empty"></span>
+                                <span class="difficulty-dot dot-empty"></span>
+                                <span class="difficulty-dot dot-empty"></span>
+                                <span class="text-sm ml-1">入门级</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mb-4">通过拖拽式界面，无需编程即可创建AI应用。适合想要快速解决特定业务问题的非技术人员。</p>
+
+                    <h4 class="font-semibold text-gray-700 mb-2">主要优势：</h4>
+                    <ul class="feature-list mb-4">
+                        <li>零编程经验要求</li>
+                        <li>可视化操作界面</li>
+                        <li>快速部署（小时级）</li>
+                        <li>预制模板和场景</li>
+                    </ul>
+
+                    <h4 class="font-semibold text-gray-700 mb-2">推荐平台：</h4>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-center">
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded mr-2">中国区</span>
+                            <span>扣子(Coze)、MiniMax、百度智能云AI工作台</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded mr-2">国际</span>
+                            <span>Zapier AI、Microsoft Power Platform、Bubble.io</span>
+                        </li>
+                    </ul>
+
+                    <div class="text-right">
+                        <span class="text-blue-600 text-sm">部署时间：数小时 ~ 2天</span>
+                    </div>
+                </div>
+
+                <!-- AI智能体 (AI Agent) -->
+                <div
+                    class="solution-card p-6 bg-gradient-to-br from-purple-50 to-purple-100 border-t-4 border-purple-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-robot text-3xl text-purple-500 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">AI智能体 (AI Agent)</h3>
+                            <div class="difficulty-indicator text-purple-500 mt-1">
+                                <span class="difficulty-dot dot-filled"></span>
+                                <span class="difficulty-dot dot-filled"></span>
+                                <span class="difficulty-dot dot-empty"></span>
+                                <span class="difficulty-dot dot-empty"></span>
+                                <span class="difficulty-dot dot-empty"></span>
+                                <span class="text-sm ml-1">中级</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mb-4">能自主理解、规划和执行任务的AI程序。可处理复杂任务，如数据分析、自动化工作流程、客户服务等。</p>
+
+                    <h4 class="font-semibold text-gray-700 mb-2">主要优势：</h4>
+                    <ul class="feature-list mb-4">
+                        <li>可自主完成复杂任务</li>
+                        <li>可与企业系统集成</li>
+                        <li>适应性更强</li>
+                        <li>支持多步骤决策</li>
+                    </ul>
+
+                    <h4 class="font-semibold text-gray-700 mb-2">推荐平台：</h4>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-center">
+                            <span
+                                class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded mr-2">中国区</span>
+                            <span>智谱AI GLM大模型、百度文心一言、扣子平台</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span
+                                class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded mr-2">国际</span>
+                            <span>OpenAI Assistants API、Langchain、AutoGPT</span>
+                        </li>
+                    </ul>
+
+                    <div class="text-right">
+                        <span class="text-purple-600 text-sm">部署时间：1天 ~ 1周</span>
+                    </div>
+                </div>
+
+                <!-- 现有SaaS软件的AI功能集成 -->
+                <div class="solution-card p-6 bg-gradient-to-br from-green-50 to-green-100 border-t-4 border-green-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-plug text-3xl text-green-500 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">现有SaaS软件的AI功能集成</h3>
+                            <div class="difficulty-indicator text-green-500 mt-1">
+                                <span class="difficulty-dot dot-filled"></span>
+                                <span class="difficulty-dot dot-empty"></span>
+                                <span class="difficulty-dot dot-empty"></span>
+                                <span class="difficulty-dot dot-empty"></span>
+                                <span class="difficulty-dot dot-empty"></span>
+                                <span class="text-sm ml-1">入门级</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mb-4">利用已在使用的办公软件、CRM、ERP等内置的AI功能，无需额外开发即可提升工作效率。</p>
+
+                    <h4 class="font-semibold text-gray-700 mb-2">主要优势：</h4>
+                    <ul class="feature-list mb-4">
+                        <li>零额外开发工作</li>
+                        <li>与现有业务流程无缝集成</li>
+                        <li>员工学习成本低</li>
+                        <li>持续获得软件商的更新升级</li>
+                    </ul>
+
+                    <h4 class="font-semibold text-gray-700 mb-2">典型应用：</h4>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-center">
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded mr-2">办公</span>
+                            <span>Microsoft 365 Copilot、飞书/钉钉AI助手</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded mr-2">设计</span>
+                            <span>Adobe Firefly、Canva AI、Figma AI</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded mr-2">CRM</span>
+                            <span>Salesforce Einstein、HubSpot AI</span>
+                        </li>
+                    </ul>
+
+                    <div class="text-right">
+                        <span class="text-green-600 text-sm">部署时间：立即可用</span>
+                    </div>
+                </div>
+
+                <!-- API调用型定制开发 -->
+                <div class="solution-card p-6 bg-gradient-to-br from-amber-50 to-amber-100 border-t-4 border-amber-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-code text-3xl text-amber-500 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">API调用型定制开发</h3>
+                            <div class="difficulty-indicator text-amber-500 mt-1">
+                                <span class="difficulty-dot dot-filled"></span>
+                                <span class="difficulty-dot dot-filled"></span>
+                                <span class="difficulty-dot dot-filled"></span>
+                                <span class="difficulty-dot dot-filled"></span>
+                                <span class="difficulty-dot dot-filled"></span>
+                                <span class="text-sm ml-1">专业级</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mb-4">通过调用AI大模型API进行深度定制开发，实现企业特定需求，并与现有系统深度集成。</p>
+
+                    <h4 class="font-semibold text-gray-700 mb-2">主要优势：</h4>
+                    <ul class="feature-list mb-4">
+                        <li>高度定制化</li>
+                        <li>企业级系统集成</li>
+                        <li>灵活的功能扩展</li>
+                        <li>更好的数据安全控制</li>
+                    </ul>
+
+                    <h4 class="font-semibold text-gray-700 mb-2">热门API提供商：</h4>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-center">
+                            <span
+                                class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded mr-2">中国区</span>
+                            <span>百度文心大模型、腾讯混元、智谱AI API</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span
+                                class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded mr-2">国际</span>
+                            <span>OpenAI API、Google Gemini API、Anthropic Claude API</span>
+                        </li>
+                    </ul>
+
+                    <div class="text-right">
+                        <span class="text-amber-600 text-sm">部署时间：2周 ~ 数月</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-placeholder mb-10" onclick="editMediaUrl(this, 'image')">
+                <i class="fas fa-image text-4xl mb-2"></i>
+                <p>点击添加图片URL</p>
+                <p class="text-sm">(建议：展示无代码AI平台界面或AI Agent工作流示例)</p>
+            </div>
+        </section>
+
+        <!-- 无代码平台使用案例 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">案例展示：无需编码，3小时搭建专属AI助手</h2>
+
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 mb-8">
+                <div class="flex flex-col md:flex-row mb-6">
+                    <div class="w-full md:w-1/2 md:pr-6 mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">客户案例：某中型贸易公司</h3>
+                        <p class="mb-3"><strong>业务需求：</strong>希望搭建一个能回答产品规格、价格和库存的AI客服，减轻销售团队负担。</p>
+                        <p class="mb-3"><strong>团队情况：</strong>无技术人员，销售经理负责项目，只有基础办公软件使用经验。</p>
+                        <p class="mb-3"><strong>选择方案：</strong>使用扣子(Coze)无代码平台创建AI助手。</p>
+                    </div>
+
+                    <div
+                        class="w-full md:w-1/2 md:pl-6 border-t-2 md:border-t-0 md:border-l-2 border-blue-100 pt-4 md:pt-0 md:pl-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">项目成果</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>3小时内完成搭建和测试</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>能够回答90%的常见产品问题</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>销售团队咨询问题减少65%</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>客户反馈响应速度提升85%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="step-card bg-white shadow-sm">
+                        <div class="text-center mb-3">
+                            <span
+                                class="inline-block w-8 h-8 rounded-full bg-blue-500 text-white text-lg font-bold flex items-center justify-center">1</span>
+                        </div>
+                        <h4 class="font-semibold text-center mb-2">上传产品资料</h4>
+                        <p class="text-sm text-gray-600">将产品目录、规格表和价格表上传到平台，AI自动提取关键信息。</p>
+                    </div>
+
+                    <div class="step-card bg-white shadow-sm">
+                        <div class="text-center mb-3">
+                            <span
+                                class="inline-block w-8 h-8 rounded-full bg-blue-500 text-white text-lg font-bold flex items-center justify-center">2</span>
+                        </div>
+                        <h4 class="font-semibold text-center mb-2">定义问答场景</h4>
+                        <p class="text-sm text-gray-600">设置常见问题类型和回复模板，添加客户问题示例进行训练。</p>
+                    </div>
+
+                    <div class="step-card bg-white shadow-sm">
+                        <div class="text-center mb-3">
+                            <span
+                                class="inline-block w-8 h-8 rounded-full bg-blue-500 text-white text-lg font-bold flex items-center justify-center">3</span>
+                        </div>
+                        <h4 class="font-semibold text-center mb-2">部署与集成</h4>
+                        <p class="text-sm text-gray-600">生成微信小程序链接和网页嵌入代码，一键部署到公司渠道。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-placeholder" onclick="editMediaUrl(this, 'video')">
+                <i class="fas fa-video text-4xl mb-2"></i>
+                <p>点击添加视频URL</p>
+                <p class="text-sm">(建议：无代码平台搭建AI助手的操作演示视频)</p>
+            </div>
+        </section>
+
+        <!-- 方案对比表 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">方案对比：选择最适合您的AI应用路径</h2>
+
+            <div class="overflow-auto">
+                <table class="comparison-table w-full border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="w-1/5">对比维度</th>
+                            <th class="w-1/5">无代码/低代码平台</th>
+                            <th class="w-1/5">AI智能体 (Agent)</th>
+                            <th class="w-1/5">SaaS软件AI集成</th>
+                            <th class="w-1/5">API调用型定制开发</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-semibold">适用用户</td>
+                            <td>业务人员、管理者</td>
+                            <td>产品经理、业务分析师</td>
+                            <td>所有员工</td>
+                            <td>开发团队</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">技术门槛</td>
+                            <td class="text-green-600">★☆☆☆☆<br>极低</td>
+                            <td class="text-blue-600">★★☆☆☆<br>中等</td>
+                            <td class="text-green-600">★☆☆☆☆<br>极低</td>
+                            <td class="text-red-600">★★★★★<br>很高</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">项目周期</td>
+                            <td class="text-green-600">数小时-数天</td>
+                            <td class="text-blue-600">数天-数周</td>
+                            <td class="text-green-600">立即可用</td>
+                            <td class="text-red-600">数周-数月</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">定制灵活性</td>
+                            <td class="text-red-600">有限</td>
+                            <td class="text-blue-600">中等</td>
+                            <td class="text-red-600">固定功能</td>
+                            <td class="text-green-600">极高</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">系统集成</td>
+                            <td class="text-blue-600">基础API集成</td>
+                            <td class="text-blue-600">可集成多种系统</td>
+                            <td class="text-green-600">原生集成</td>
+                            <td class="text-green-600">深度定制集成</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">适用场景</td>
+                            <td>客服问答、内容生成、简单流程自动化</td>
+                            <td>复杂任务自动化、数据分析、多步骤决策</td>
+                            <td>日常办公、设计创作、客户管理</td>
+                            <td>企业核心系统、大规模应用、高安全需求</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">维护难度</td>
+                            <td class="text-green-600">简单</td>
+                            <td class="text-blue-600">中等</td>
+                            <td class="text-green-600">由服务商维护</td>
+                            <td class="text-red-600">复杂</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">成本投入</td>
+                            <td class="text-green-600">低</td>
+                            <td class="text-blue-600">中</td>
+                            <td class="text-blue-600">中（订阅费）</td>
+                            <td class="text-red-600">高</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 入门推荐 -->
+        <section>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">AI应用入门路径推荐</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="solution-card p-6 bg-white border border-gray-200 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">对于没有技术团队的企业</h3>
+
+                    <ol class="space-y-4 mb-6 flex-grow">
+                        <li class="flex">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold mr-3">1</span>
+                            <div>
+                                <p class="font-bold">先应用现有SaaS工具的AI功能</p>
+                                <p class="text-gray-600 text-sm">如Office 365/WPS的AI助手、飞书/钉钉的智能功能等，快速提升日常工作效率。</p>
+                            </div>
+                        </li>
+
+                        <li class="flex">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold mr-3">2</span>
+                            <div>
+                                <p class="font-bold">尝试无代码平台创建特定场景应用</p>
+                                <p class="text-gray-600 text-sm">针对客服、销售、营销等特定场景，使用无代码平台快速搭建AI应用。</p>
+                            </div>
+                        </li>
+
+                        <li class="flex">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold mr-3">3</span>
+                            <div>
+                                <p class="font-bold">考虑外包定制更复杂的AI解决方案</p>
+                                <p class="text-gray-600 text-sm">当业务需求复杂度提升，考虑寻找技术服务商定制开发。</p>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <div class="highlight-box p-3 mt-auto">
+                        <p class="text-sm font-medium">主要优势：无需技术团队、快速见效、投入风险小</p>
+                    </div>
+                </div>
+
+                <div class="solution-card p-6 bg-white border border-gray-200 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">对于拥有技术团队的企业</h3>
+
+                    <ol class="space-y-4 mb-6 flex-grow">
+                        <li class="flex">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold mr-3">1</span>
+                            <div>
+                                <p class="font-bold">使用AI智能体处理内部流程自动化</p>
+                                <p class="text-gray-600 text-sm">选择低代码AI Agent平台，自动化数据处理、报告生成等内部流程。</p>
+                            </div>
+                        </li>
+
+                        <li class="flex">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold mr-3">2</span>
+                            <div>
+                                <p class="font-bold">开发团队学习并应用API接入</p>
+                                <p class="text-gray-600 text-sm">技术团队学习大模型API使用，开始在内部应用中集成AI功能。</p>
+                            </div>
+                        </li>
+
+                        <li class="flex">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold mr-3">3</span>
+                            <div>
+                                <p class="font-bold">逐步构建企业级AI应用</p>
+                                <p class="text-gray-600 text-sm">在积累经验后，开发更复杂的企业级应用，与核心业务系统深度集成。</p>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <div class="highlight-box p-3 mt-auto">
+                        <p class="text-sm font-medium">主要优势：更高定制度、更好的数据安全性、长期技术积累</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box p-5 mt-8">
+                <p class="font-medium text-center">无论您的企业规模、行业和技术水平如何，都有适合您的AI应用路径。最重要的是开始行动，从小处着手，逐步积累经验和信心。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 编辑媒体URL的功能
+        function editMediaUrl(element, type) {
+            const url = prompt(`请输入${type === 'image' ? '图片' : '视频'}URL：`);
+            if (url && url.trim() !== '') {
+                if (type === 'image') {
+                    element.innerHTML = `<img src="${url}" alt="用户添加的图片" class="w-full h-auto rounded-lg">`;
+                } else if (type === 'video') {
+                    element.innerHTML = `<iframe src="${url}" frameborder="0" allowfullscreen class="w-full h-64 md:h-96 rounded-lg"></iframe>`;
+                }
+                element.classList.remove('media-placeholder');
+                element.removeAttribute('onclick');
+            }
+        }
+    </script>
+</body>
+
+</html>

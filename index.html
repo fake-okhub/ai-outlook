@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI赋能企业：战略与实践</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            /* Light gray background for the page */
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            /* 12px */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 180px;
+            /* Fixed height for cards */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Pushes icon to bottom */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .card.active {
+            border: 2px solid #3b82f6;
+            /* Blue border for active card */
+            background-color: #f0f7ff;
+            /* Light blue background */
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            /* Increased icon size */
+            color: #3b82f6;
+            /* Blue-500 */
+        }
+
+        .mindmap-container ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .mindmap-container>ul>li {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #3b82f6;
+            /* Blue accent */
+        }
+
+        .mindmap-container>ul>li>span {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #1e3a8a;
+            /* Darker blue for main topics */
+            cursor: pointer;
+        }
+
+        .mindmap-container>ul>li>span:hover {
+            text-decoration: underline;
+        }
+
+        .mindmap-container ul ul li {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9fafb;
+            /* Lighter background for sub-topics */
+            border-radius: 6px;
+            border-left: 3px solid #60a5fa;
+            /* Lighter blue accent */
+        }
+
+        .mindmap-container ul ul li span {
+            cursor: pointer;
+            color: #1d4ed8;
+            /* Medium blue for sub-topics */
+        }
+
+        .mindmap-container ul ul li span:hover {
+            text-decoration: underline;
+        }
+
+        .mindmap-container li.active {
+            background-color: #eff6ff;
+            /* Light blue background */
+        }
+
+        .mindmap-container li.active>span {
+            color: #2563eb;
+            /* Brighter blue for active item */
+            font-weight: bold;
+        }
+
+        #contentFrame {
+            border: 1px solid #d1d5db;
+            /* Gray-300 border */
+            border-radius: 0.5rem;
+            /* 8px */
+            background-color: #ffffff;
+        }
+
+        .active-view-button {
+            background-color: #3b82f6;
+            /* Blue-500 */
+            color: white;
+        }
+
+        .inactive-view-button {
+            background-color: #e5e7eb;
+            /* Gray-200 */
+            color: #374151;
+            /* Gray-700 */
+        }
+
+        .content-placeholder {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            color: #6b7280;
+            /* Gray-500 */
+        }
+
+        .content-placeholder .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #9ca3af;
+            /* Gray-400 */
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold tracking-tight">
+                <i class="fas fa-brain mr-2"></i>AI赋能企业：战略与实践
+            </h1>
+            <div class="mt-4 sm:mt-0">
+                <button id="cardViewBtn"
+                    class="active-view-button font-semibold py-2 px-4 rounded-l-lg transition-colors duration-300">
+                    <i class="fas fa-th-large mr-2"></i>卡片视图
+                </button>
+                <button id="mindmapViewBtn"
+                    class="inactive-view-button font-semibold py-2 px-4 rounded-r-lg transition-colors duration-300">
+                    <i class="fas fa-sitemap mr-2"></i>脑图视图
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 flex-grow w-full flex flex-col lg:flex-row gap-6">
+
+        <div id="navigationPanel" class="w-full lg:w-1/3 lg:max-w-md xl:max-w-lg flex-shrink-0">
+            <div id="cardView">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-700">内容导航</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                </div>
+            </div>
+
+            <div id="mindmapView" class="hidden">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-700">脑图导航</h2>
+                <div class="mindmap-container bg-white p-4 rounded-lg shadow">
+                </div>
+            </div>
+        </div>
+
+        <div id="contentDisplayPanel" class="w-full lg:w-2/3 flex-grow bg-white p-1 rounded-lg shadow-xl">
+            <iframe id="contentFrame" name="contentFrame" class="w-full h-[calc(100vh-180px)] sm:h-[calc(100vh-150px)]"
+                src="about:blank" title="章节内容"></iframe>
+            <div id="iframePlaceholder"
+                class="content-placeholder w-full h-[calc(100vh-180px)] sm:h-[calc(100vh-150px)]">
+                <i class="fas fa-book-open icon"></i>
+                <p class="text-xl">请从左侧选择一个章节来查看详细内容。</p>
+                <p class="text-sm mt-2">您可以通过上方的按钮在"卡片视图"和"脑图视图"之间切换导航方式。</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const sections = [
+            {
+                id: 's1', title: 'AI时代的工作变革', file: 'sections/section1_intro.html', icon: 'fa-briefcase',
+                summary: 'AI科普：当前AI是什么？它将如何重塑工作？'
+            },
+            {
+                id: 's2.1', title: 'AI赋能各行各业', file: 'sections/section2_value_cases.html', icon: 'fa-chart-line',
+                summary: '实际案例与数据佐证，看AI如何创造利润。'
+            },
+            {
+                id: 's2.2', title: 'AI与您的团队', file: 'sections/section2_value_team.html', icon: 'fa-users-cog',
+                summary: '战略性调整团队，而非简单裁员。'
+            },
+            {
+                id: 's3.1', title: '人人可用的AI方案', file: 'sections/section3_quickstart_solutions.html', icon: 'fa-rocket',
+                summary: '从无代码平台到智能体，快速上手AI。'
+            },
+            {
+                id: 's3.2', title: '智能客户/员工沟通', file: 'sections/section3_quickstart_communication.html', icon: 'fa-comments',
+                summary: '用AI与文档提升沟通效率。'
+            },
+            {
+                id: 's4.1', title: 'AI内容营销与自媒体', file: 'sections/section4_growth_content.html', icon: 'fa-bullhorn',
+                summary: '自动化内容生产与账号运营。'
+            },
+            {
+                id: 's4.2', title: 'AI建站与全球化战略', file: 'sections/section4_growth_global.html', icon: 'fa-globe-americas',
+                summary: '快速搭建内外宣传及独立电商平台。'
+            },
+            {
+                id: 's5.1', title: 'AI优化企业管理', file: 'sections/section5_management_erp.html', icon: 'fa-cogs',
+                summary: '用AI与多维表格打造企业级"微型ERP"。'
+            },
+            {
+                id: 's6.1', title: 'AI助力个人成长', file: 'sections/section6_empowerment_personal.html', icon: 'fa-user-graduate',
+                summary: '老板、经理与员工的效率革命。'
+            },
+            {
+                id: 's6.2', title: 'AI与企业文化关怀', file: 'sections/section6_empowerment_culture.html', icon: 'fa-heartbeat',
+                summary: '流程优化与身心健康新视角。'
+            },
+            {
+                id: 's6.3', title: '不拥抱AI的代价', file: 'sections/section6_empowerment_warning.html', icon: 'fa-exclamation-triangle',
+                summary: '第四次工业革命浪潮下的企业生存警示。'
+            },
+            {
+                id: 's7.1', title: 'AI未来五年展望', file: 'sections/section7_roadmap.html', icon: 'fa-calendar-alt',
+                summary: '企业降本增效路线图与方案预演。'
+            },
+            {
+                id: 's8.1', title: '立即行动：决胜未来', file: 'sections/section8_conclusion.html', icon: 'fa-flag-checkered',
+                summary: '时不我待，拥抱AI，决胜未来！'
+            }
+        ];
+
+        const mindmapStructure = [
+            {
+                title: '首页/引言 (AI与未来工作：您的抉择)', file: 'sections/section1_intro.html', id: 's1'
+            },
+            {
+                title: 'AI的商业价值 (AI已在创造利润)',
+                children: [
+                    { title: '行业案例与数据', file: 'sections/section2_value_cases.html', id: 's2.1' },
+                    { title: 'AI与您的团队', file: 'sections/section2_value_team.html', id: 's2.2' }
+                ]
+            },
+            {
+                title: 'AI快速上手指南 (从了解到行动)',
+                children: [
+                    { title: '人人可用的AI方案', file: 'sections/section3_quickstart_solutions.html', id: 's3.1' },
+                    { title: '智能客户/员工沟通', file: 'sections/section3_quickstart_communication.html', id: 's3.2' }
+                ]
+            },
+            {
+                title: 'AI驱动业务增长 (营销、获客与出海)',
+                children: [
+                    { title: 'AI内容营销与自媒体', file: 'sections/section4_growth_content.html', id: 's4.1' },
+                    { title: 'AI建站与全球化战略', file: 'sections/section4_growth_global.html', id: 's4.2' }
+                ]
+            },
+            {
+                title: 'AI优化企业管理', file: 'sections/section5_management_erp.html', id: 's5.1'
+            },
+            {
+                title: 'AI赋能与时代警示',
+                children: [
+                    { title: 'AI助力个人成长', file: 'sections/section6_empowerment_personal.html', id: 's6.1' },
+                    { title: 'AI与企业文化关怀', file: 'sections/section6_empowerment_culture.html', id: 's6.2' },
+                    { title: '【重点】不拥抱AI的代价', file: 'sections/section6_empowerment_warning.html', id: 's6.3' }
+                ]
+            },
+            {
+                title: 'AI未来五年展望 (企业行动路线图)', file: 'sections/section7_roadmap.html', id: 's7.1'
+            },
+            {
+                title: '立即行动 (时不我待，决胜未来！)', file: 'sections/section8_conclusion.html', id: 's8.1'
+            }
+        ];
+
+        const cardView = document.getElementById('cardView');
+        const mindmapView = document.getElementById('mindmapView');
+        const cardViewBtn = document.getElementById('cardViewBtn');
+        const mindmapViewBtn = document.getElementById('mindmapViewBtn');
+        const contentFrame = document.getElementById('contentFrame');
+        const iframePlaceholder = document.getElementById('iframePlaceholder');
+        const cardContainer = cardView.querySelector('.grid');
+        const mindmapContainer = mindmapView.querySelector('.mindmap-container');
+
+        // Track active elements
+        let activeCard = null;
+        let activeMindmapItem = null;
+
+        function loadContent(filePath, activeElement, view) {
+            if (filePath && filePath !== 'about:blank') {
+                contentFrame.src = filePath;
+                contentFrame.classList.remove('hidden');
+                iframePlaceholder.classList.add('hidden');
+
+                // Update active state based on view
+                if (view === 'card' && activeElement) {
+                    if (activeCard) activeCard.classList.remove('active');
+                    activeCard = activeElement;
+                    activeCard.classList.add('active');
+                } else if (view === 'mindmap' && activeElement) {
+                    if (activeMindmapItem) activeMindmapItem.classList.remove('active');
+                    activeMindmapItem = activeElement;
+                    activeMindmapItem.classList.add('active');
+                }
+            } else {
+                contentFrame.classList.add('hidden');
+                iframePlaceholder.classList.remove('hidden');
+                contentFrame.src = 'about:blank'; // Clear iframe
+            }
+        }
+
+        // Populate Card View
+        sections.forEach((section, index) => {
+            const card = document.createElement('div');
+            card.className = 'card p-5 cursor-pointer transform hover:scale-105 transition-transform duration-300 ease-in-out';
+            card.innerHTML = `
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">${section.title}</h3>
+                    <p class="text-sm text-gray-600 mb-3">${section.summary}</p>
+                </div>
+                <div class="text-right mt-auto">
+                     <i class="fas ${section.icon} card-icon"></i>
+                </div>
+            `;
+            card.addEventListener('click', () => loadContent(section.file, card, 'card'));
+            cardContainer.appendChild(card);
+
+            // Set first card as active by default
+            if (index === 0) {
+                activeCard = card;
+                card.classList.add('active');
+            }
+        });
+
+        // Populate Mind Map View
+        function createMindmapNode(item, parentElement) {
+            const li = document.createElement('li');
+            const span = document.createElement('span');
+            span.textContent = item.title;
+
+            if (item.file) {
+                span.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent triggering parent click events
+                    loadContent(item.file, li, 'mindmap');
+                });
+
+                // If this is the first item with a file, mark it as the default active mindmap item
+                if (item.id === 's1') {
+                    activeMindmapItem = li;
+                    li.classList.add('active');
+                }
+            } else {
+                span.style.cursor = 'default'; // Not clickable if no file
+                span.style.fontWeight = 'bold';
+            }
+
+            li.appendChild(span);
+
+            if (item.children && item.children.length > 0) {
+                const subUl = document.createElement('ul');
+                subUl.className = 'pl-6 mt-2';
+                item.children.forEach(child => createMindmapNode(child, subUl));
+                li.appendChild(subUl);
+            }
+            parentElement.appendChild(li);
+        }
+
+        const mindmapRootUl = document.createElement('ul');
+        mindmapStructure.forEach(item => createMindmapNode(item, mindmapRootUl));
+        mindmapContainer.appendChild(mindmapRootUl);
+
+
+        // View Toggling Logic
+        cardViewBtn.addEventListener('click', () => {
+            cardView.classList.remove('hidden');
+            mindmapView.classList.add('hidden');
+            cardViewBtn.classList.replace('inactive-view-button', 'active-view-button');
+            mindmapViewBtn.classList.replace('active-view-button', 'inactive-view-button');
+
+            // If a card was previously active, show its content
+            if (activeCard) {
+                const activeSection = sections.find(s => s.title === activeCard.querySelector('h3').textContent);
+                if (activeSection) {
+                    loadContent(activeSection.file, activeCard, 'card');
+                }
+            }
+        });
+
+        mindmapViewBtn.addEventListener('click', () => {
+            mindmapView.classList.remove('hidden');
+            cardView.classList.add('hidden');
+            mindmapViewBtn.classList.replace('inactive-view-button', 'active-view-button');
+            cardViewBtn.classList.replace('active-view-button', 'inactive-view-button');
+
+            // If a mindmap item was previously active, show its content
+            if (activeMindmapItem) {
+                const spanText = activeMindmapItem.querySelector('span').textContent;
+                const activeItem = findMindmapItemByTitle(mindmapStructure, spanText);
+                if (activeItem && activeItem.file) {
+                    loadContent(activeItem.file, activeMindmapItem, 'mindmap');
+                }
+            }
+        });
+
+        // Helper function to find an item in the mindmap structure by title
+        function findMindmapItemByTitle(items, title) {
+            for (const item of items) {
+                if (item.title === title) {
+                    return item;
+                }
+                if (item.children) {
+                    const found = findMindmapItemByTitle(item.children, title);
+                    if (found) return found;
+                }
+            }
+            return null;
+        }
+
+        // Initial content load - load the first section by default
+        loadContent(sections[0].file, activeCard, 'card');
+
+    </script>
+</body>
+
+</html>
