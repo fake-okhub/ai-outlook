@@ -144,6 +144,40 @@
             color: #9ca3af;
             /* Gray-400 */
         }
+
+        /* Category tabs styles */
+        .category-tabs {
+            display: flex;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 1rem;
+        }
+
+        .category-tab {
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            margin-right: 0.5rem;
+        }
+
+        .category-tab.active {
+            color: #3b82f6;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        .category-tab:hover:not(.active) {
+            color: #60a5fa;
+            border-bottom: 3px solid #60a5fa;
+        }
+
+        .category-content {
+            display: none;
+        }
+
+        .category-content.active {
+            display: block;
+        }
     </style>
 </head>
 
@@ -170,15 +204,43 @@
     <main class="container mx-auto p-4 sm:p-6 flex-grow w-full flex flex-col lg:flex-row gap-6">
 
         <div id="navigationPanel" class="w-full lg:w-1/3 lg:max-w-md xl:max-w-lg flex-shrink-0">
-            <div id="cardView">
-                <h2 class="text-2xl font-semibold mb-4 text-gray-700">内容导航</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Category tabs -->
+            <div class="category-tabs">
+                <div id="enterpriseTab" class="category-tab active">
+                    <i class="fas fa-building mr-2"></i>企业
+                </div>
+                <div id="personalTab" class="category-tab">
+                    <i class="fas fa-user mr-2"></i>个人
                 </div>
             </div>
 
-            <div id="mindmapView" class="hidden">
-                <h2 class="text-2xl font-semibold mb-4 text-gray-700">脑图导航</h2>
-                <div class="mindmap-container bg-white p-4 rounded-lg shadow">
+            <!-- Enterprise content -->
+            <div id="enterpriseContent" class="category-content active">
+                <div id="cardView">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-700">内容导航</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    </div>
+                </div>
+
+                <div id="mindmapView" class="hidden">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-700">脑图导航</h2>
+                    <div class="mindmap-container bg-white p-4 rounded-lg shadow">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal content -->
+            <div id="personalContent" class="category-content">
+                <div id="personalCardView">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-700">个人内容导航</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    </div>
+                </div>
+
+                <div id="personalMindmapView" class="hidden">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-700">个人脑图导航</h2>
+                    <div class="mindmap-container bg-white p-4 rounded-lg shadow">
+                    </div>
                 </div>
             </div>
         </div>
@@ -295,18 +357,144 @@
             }
         ];
 
+        // Personal sections data
+        const personalSections = [
+            {
+                id: 'p1', title: '哪些工种容易被AI替代？', file: 'sections/personal/p1_replaceable_jobs.html', icon: 'fa-robot',
+                summary: '解析AI技术对职业的颠覆性影响与变革'
+            },
+            {
+                id: 'p2', title: '哪些工种不容易被AI替代？', file: 'sections/personal/p2_irreplaceable_jobs.html', icon: 'fa-hands-helping',
+                summary: '探讨AI难以触及的人类独特价值和能力'
+            },
+            {
+                id: 'p3', title: '10年以内AI发展推演（至2035年）', file: 'sections/personal/p3_ai_10years.html', icon: 'fa-chart-line',
+                summary: '近未来AI技术的发展路径与社会影响'
+            },
+            {
+                id: 'p4', title: '30年以内AI发展推演（至2055年）', file: 'sections/personal/p4_ai_30years.html', icon: 'fa-rocket',
+                summary: '中期AI技术与人类社会的共同演化'
+            },
+            {
+                id: 'p5', title: '50年以内AI发展推演（至2075年）', file: 'sections/personal/p5_ai_50years.html', icon: 'fa-space-shuttle',
+                summary: '远期AI进展与人类文明的转型可能'
+            },
+            {
+                id: 'p6', title: '50年后的人类社会设想', file: 'sections/personal/p6_future_society.html', icon: 'fa-city',
+                summary: '未来世界的生活、工作与社会构想'
+            },
+            {
+                id: 'p7', title: '人类离AGI还有多远？', file: 'sections/personal/p7_agi_challenges.html', icon: 'fa-brain',
+                summary: '通往通用人工智能之路的挑战与瓶颈'
+            }
+        ];
+
+        // Personal mindmap structure
+        const personalMindmapStructure = [
+            {
+                title: 'AI对工作的影响',
+                children: [
+                    { title: '哪些工种容易被AI替代？', file: 'sections/personal/p1_replaceable_jobs.html', id: 'p1' },
+                    { title: '哪些工种不容易被AI替代？', file: 'sections/personal/p2_irreplaceable_jobs.html', id: 'p2' }
+                ]
+            },
+            {
+                title: 'AI发展时间线',
+                children: [
+                    { title: '10年以内AI发展推演（至2035年）', file: 'sections/personal/p3_ai_10years.html', id: 'p3' },
+                    { title: '30年以内AI发展推演（至2055年）', file: 'sections/personal/p4_ai_30years.html', id: 'p4' },
+                    { title: '50年以内AI发展推演（至2075年）', file: 'sections/personal/p5_ai_50years.html', id: 'p5' }
+                ]
+            },
+            {
+                title: '未来展望',
+                children: [
+                    { title: '50年后的人类社会设想', file: 'sections/personal/p6_future_society.html', id: 'p6' },
+                    { title: '人类离AGI还有多远？', file: 'sections/personal/p7_agi_challenges.html', id: 'p7' }
+                ]
+            }
+        ];
+
         const cardView = document.getElementById('cardView');
         const mindmapView = document.getElementById('mindmapView');
+        const personalCardView = document.getElementById('personalCardView');
+        const personalMindmapView = document.getElementById('personalMindmapView');
         const cardViewBtn = document.getElementById('cardViewBtn');
         const mindmapViewBtn = document.getElementById('mindmapViewBtn');
         const contentFrame = document.getElementById('contentFrame');
         const iframePlaceholder = document.getElementById('iframePlaceholder');
         const cardContainer = cardView.querySelector('.grid');
+        const personalCardContainer = personalCardView.querySelector('.grid');
         const mindmapContainer = mindmapView.querySelector('.mindmap-container');
+        const personalMindmapContainer = personalMindmapView.querySelector('.mindmap-container');
+        const enterpriseTab = document.getElementById('enterpriseTab');
+        const personalTab = document.getElementById('personalTab');
+        const enterpriseContent = document.getElementById('enterpriseContent');
+        const personalContent = document.getElementById('personalContent');
 
         // Track active elements
         let activeCard = null;
         let activeMindmapItem = null;
+        let activePersonalCard = null;
+        let activePersonalMindmapItem = null;
+        let currentCategory = 'enterprise'; // Default category
+
+        // Tab switching logic
+        enterpriseTab.addEventListener('click', () => {
+            enterpriseTab.classList.add('active');
+            personalTab.classList.remove('active');
+            enterpriseContent.classList.add('active');
+            personalContent.classList.remove('active');
+            currentCategory = 'enterprise';
+
+            // Load the active enterprise content
+            if (mindmapView.classList.contains('hidden')) {
+                // Card view is active
+                if (activeCard) {
+                    const activeSection = sections.find(s => s.title === activeCard.querySelector('h3').textContent);
+                    if (activeSection) {
+                        loadContent(activeSection.file, activeCard, 'card');
+                    }
+                }
+            } else {
+                // Mindmap view is active
+                if (activeMindmapItem) {
+                    const spanText = activeMindmapItem.querySelector('span').textContent;
+                    const activeItem = findMindmapItemByTitle(mindmapStructure, spanText);
+                    if (activeItem && activeItem.file) {
+                        loadContent(activeItem.file, activeMindmapItem, 'mindmap');
+                    }
+                }
+            }
+        });
+
+        personalTab.addEventListener('click', () => {
+            personalTab.classList.add('active');
+            enterpriseTab.classList.remove('active');
+            personalContent.classList.add('active');
+            enterpriseContent.classList.remove('active');
+            currentCategory = 'personal';
+
+            // Load the active personal content
+            if (personalMindmapView.classList.contains('hidden')) {
+                // Card view is active
+                if (activePersonalCard) {
+                    const activeSection = personalSections.find(s => s.title === activePersonalCard.querySelector('h3').textContent);
+                    if (activeSection) {
+                        loadContent(activeSection.file, activePersonalCard, 'personalCard');
+                    }
+                }
+            } else {
+                // Mindmap view is active
+                if (activePersonalMindmapItem) {
+                    const spanText = activePersonalMindmapItem.querySelector('span').textContent;
+                    const activeItem = findMindmapItemByTitle(personalMindmapStructure, spanText);
+                    if (activeItem && activeItem.file) {
+                        loadContent(activeItem.file, activePersonalMindmapItem, 'personalMindmap');
+                    }
+                }
+            }
+        });
 
         function loadContent(filePath, activeElement, view) {
             if (filePath && filePath !== 'about:blank') {
@@ -323,6 +511,14 @@
                     if (activeMindmapItem) activeMindmapItem.classList.remove('active');
                     activeMindmapItem = activeElement;
                     activeMindmapItem.classList.add('active');
+                } else if (view === 'personalCard' && activeElement) {
+                    if (activePersonalCard) activePersonalCard.classList.remove('active');
+                    activePersonalCard = activeElement;
+                    activePersonalCard.classList.add('active');
+                } else if (view === 'personalMindmap' && activeElement) {
+                    if (activePersonalMindmapItem) activePersonalMindmapItem.classList.remove('active');
+                    activePersonalMindmapItem = activeElement;
+                    activePersonalMindmapItem.classList.add('active');
                 }
             } else {
                 contentFrame.classList.add('hidden');
@@ -331,7 +527,7 @@
             }
         }
 
-        // Populate Card View
+        // Populate Enterprise Card View
         sections.forEach((section, index) => {
             const card = document.createElement('div');
             card.className = 'card p-5 cursor-pointer transform hover:scale-105 transition-transform duration-300 ease-in-out';
@@ -354,7 +550,30 @@
             }
         });
 
-        // Populate Mind Map View
+        // Populate Personal Card View
+        personalSections.forEach((section, index) => {
+            const card = document.createElement('div');
+            card.className = 'card p-5 cursor-pointer transform hover:scale-105 transition-transform duration-300 ease-in-out';
+            card.innerHTML = `
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">${section.title}</h3>
+                    <p class="text-sm text-gray-600 mb-3">${section.summary}</p>
+                </div>
+                <div class="text-right mt-auto">
+                     <i class="fas ${section.icon} card-icon"></i>
+                </div>
+            `;
+            card.addEventListener('click', () => loadContent(section.file, card, 'personalCard'));
+            personalCardContainer.appendChild(card);
+
+            // Set first card as active by default
+            if (index === 0) {
+                activePersonalCard = card;
+                card.classList.add('active');
+            }
+        });
+
+        // Populate Enterprise Mind Map View
         function createMindmapNode(item, parentElement) {
             const li = document.createElement('li');
             const span = document.createElement('span');
@@ -391,37 +610,102 @@
         mindmapStructure.forEach(item => createMindmapNode(item, mindmapRootUl));
         mindmapContainer.appendChild(mindmapRootUl);
 
+        // Populate Personal Mind Map View
+        function createPersonalMindmapNode(item, parentElement) {
+            const li = document.createElement('li');
+            const span = document.createElement('span');
+            span.textContent = item.title;
+
+            if (item.file) {
+                span.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent triggering parent click events
+                    loadContent(item.file, li, 'personalMindmap');
+                });
+
+                // If this is the first item with a file, mark it as a potential default active mindmap item
+                if (item.id === 'p1') {
+                    activePersonalMindmapItem = li;
+                    li.classList.add('active');
+                }
+            } else {
+                span.style.cursor = 'default'; // Not clickable if no file
+                span.style.fontWeight = 'bold';
+            }
+
+            li.appendChild(span);
+
+            if (item.children && item.children.length > 0) {
+                const subUl = document.createElement('ul');
+                subUl.className = 'pl-6 mt-2';
+                item.children.forEach(child => createPersonalMindmapNode(child, subUl));
+                li.appendChild(subUl);
+            }
+            parentElement.appendChild(li);
+        }
+
+        const personalMindmapRootUl = document.createElement('ul');
+        personalMindmapStructure.forEach(item => createPersonalMindmapNode(item, personalMindmapRootUl));
+        personalMindmapContainer.appendChild(personalMindmapRootUl);
 
         // View Toggling Logic
         cardViewBtn.addEventListener('click', () => {
-            cardView.classList.remove('hidden');
-            mindmapView.classList.add('hidden');
-            cardViewBtn.classList.replace('inactive-view-button', 'active-view-button');
-            mindmapViewBtn.classList.replace('active-view-button', 'inactive-view-button');
+            if (currentCategory === 'enterprise') {
+                cardView.classList.remove('hidden');
+                mindmapView.classList.add('hidden');
 
-            // If a card was previously active, show its content
-            if (activeCard) {
-                const activeSection = sections.find(s => s.title === activeCard.querySelector('h3').textContent);
-                if (activeSection) {
-                    loadContent(activeSection.file, activeCard, 'card');
+                // If a card was previously active, show its content
+                if (activeCard) {
+                    const activeSection = sections.find(s => s.title === activeCard.querySelector('h3').textContent);
+                    if (activeSection) {
+                        loadContent(activeSection.file, activeCard, 'card');
+                    }
+                }
+            } else {
+                personalCardView.classList.remove('hidden');
+                personalMindmapView.classList.add('hidden');
+
+                // If a personal card was previously active, show its content
+                if (activePersonalCard) {
+                    const activeSection = personalSections.find(s => s.title === activePersonalCard.querySelector('h3').textContent);
+                    if (activeSection) {
+                        loadContent(activeSection.file, activePersonalCard, 'personalCard');
+                    }
                 }
             }
+
+            cardViewBtn.classList.replace('inactive-view-button', 'active-view-button');
+            mindmapViewBtn.classList.replace('active-view-button', 'inactive-view-button');
         });
 
         mindmapViewBtn.addEventListener('click', () => {
-            mindmapView.classList.remove('hidden');
-            cardView.classList.add('hidden');
-            mindmapViewBtn.classList.replace('inactive-view-button', 'active-view-button');
-            cardViewBtn.classList.replace('active-view-button', 'inactive-view-button');
+            if (currentCategory === 'enterprise') {
+                mindmapView.classList.remove('hidden');
+                cardView.classList.add('hidden');
 
-            // If a mindmap item was previously active, show its content
-            if (activeMindmapItem) {
-                const spanText = activeMindmapItem.querySelector('span').textContent;
-                const activeItem = findMindmapItemByTitle(mindmapStructure, spanText);
-                if (activeItem && activeItem.file) {
-                    loadContent(activeItem.file, activeMindmapItem, 'mindmap');
+                // If a mindmap item was previously active, show its content
+                if (activeMindmapItem) {
+                    const spanText = activeMindmapItem.querySelector('span').textContent;
+                    const activeItem = findMindmapItemByTitle(mindmapStructure, spanText);
+                    if (activeItem && activeItem.file) {
+                        loadContent(activeItem.file, activeMindmapItem, 'mindmap');
+                    }
+                }
+            } else {
+                personalMindmapView.classList.remove('hidden');
+                personalCardView.classList.add('hidden');
+
+                // If a personal mindmap item was previously active, show its content
+                if (activePersonalMindmapItem) {
+                    const spanText = activePersonalMindmapItem.querySelector('span').textContent;
+                    const activeItem = findMindmapItemByTitle(personalMindmapStructure, spanText);
+                    if (activeItem && activeItem.file) {
+                        loadContent(activeItem.file, activePersonalMindmapItem, 'personalMindmap');
+                    }
                 }
             }
+
+            mindmapViewBtn.classList.replace('inactive-view-button', 'active-view-button');
+            cardViewBtn.classList.replace('active-view-button', 'inactive-view-button');
         });
 
         // Helper function to find an item in the mindmap structure by title
