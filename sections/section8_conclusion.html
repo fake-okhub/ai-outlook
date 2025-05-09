@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>立即行动：决胜未来 - AI赋能企业</title>
+    <title>AI赋能未来：开启你的一人公司新纪元</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,176 +16,542 @@
             line-height: 1.6;
         }
 
-        .action-card {
-            border-left: 4px solid #3b82f6;
-            background-color: #eff6ff;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .action-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
-
-        .call-to-action {
-            background: linear-gradient(to right, #3b82f6, #2563eb);
-            color: white;
+        .btn-primary {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
             transition: all 0.3s ease;
         }
 
-        .call-to-action:hover {
-            background: linear-gradient(to right, #2563eb, #1d4ed8);
-            transform: scale(1.05);
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+
+        .card {
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 
 <body>
-    <div class="container mx-auto px-4 py-12 max-w-4xl">
-        <header class="mb-12 text-center">
-            <h1 class="text-4xl font-bold text-blue-700 mb-4">
-                <i class="fas fa-flag-checkered mr-3"></i>立即行动：决胜未来
-            </h1>
-            <p class="text-xl text-gray-600">时不我待，拥抱AI，决胜未来！</p>
-        </header>
-
-        <main>
-            <section class="mb-12">
-                <div class="bg-white rounded-xl shadow-md p-8 mb-8">
-                    <h2 class="text-2xl font-bold text-blue-800 mb-6">把握战略机遇，刻不容缓</h2>
-
-                    <p class="mb-4 text-lg">
-                        站在这个前所未有的历史节点上，我们必须清醒认识：<span
-                            class="highlight font-semibold">AI不再是锦上添花的选择，而是决定企业能否在未来市场中立足的关键</span>。
-                    </p>
-
-                    <p class="mb-4 text-lg">
-                        当竞争对手正在利用AI重塑业务模式、提升效率、降低成本、创新产品时，守旧不前的企业将面临被市场淘汰的风险。AI革命不是"可能发生"，而是"正在发生"，并且速度超出大多数人的想象。
-                    </p>
-
-                    <div class="my-8 p-6 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
-                        <h3 class="text-xl font-bold text-red-700 mb-3">
-                            <i class="fas fa-exclamation-triangle mr-2"></i>观望等待的代价
-                        </h3>
-                        <p class="text-gray-800">
-                            在这场AI革命中，<strong>没有"观望者"的位置</strong>。每一天的犹豫不决，都是让竞争对手拉开差距的机会。不要将AI视为遥远的未来，它已经是当下的竞争力。今天不行动，明天将付出更大的追赶成本。
-                        </p>
-                    </div>
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">AI+一人公司</span>
                 </div>
-
-                <div class="grid md:grid-cols-3 gap-6 mb-8">
-                    <div class="action-card p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold text-blue-800 mb-3">
-                            <i class="fas fa-rocket mr-2 text-blue-600"></i>立即行动
-                        </h3>
-                        <p>从现在开始，从小处着手，积极尝试和应用AI，哪怕只是一个简单的AI工具，也能为您打开一扇新的大门。第一步永远是最关键的。</p>
-                    </div>
-
-                    <div class="action-card p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold text-blue-800 mb-3">
-                            <i class="fas fa-graduation-cap mr-2 text-blue-600"></i>持续学习
-                        </h3>
-                        <p>AI技术日新月异，企业领导者必须带领团队保持对AI技术和应用的关注与学习，将企业打造成一个学习型组织。</p>
-                    </div>
-
-                    <div class="action-card p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold text-blue-800 mb-3">
-                            <i class="fas fa-sync-alt mr-2 text-blue-600"></i>拥抱变革
-                        </h3>
-                        <p>AI带来的不仅仅是工具的改变，更是思维模式、组织架构和企业文化的深刻变革。主动拥抱，才能化挑战为机遇。</p>
-                    </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#challenge" class="text-gray-700 hover:text-blue-500">面临的挑战</a>
+                    <a href="#solution" class="text-gray-700 hover:text-blue-500">解决方案</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-blue-500">机遇与优势</a>
+                    <a href="#action" class="text-gray-700 hover:text-blue-500">行动蓝图</a>
                 </div>
-            </section>
+            </div>
+        </div>
+    </nav>
 
-            <section class="mb-12">
-                <div class="bg-white rounded-xl shadow-md p-8">
-                    <h2 class="text-2xl font-bold text-blue-800 mb-6">如何开始您的AI之旅</h2>
-
-                    <ol class="space-y-4 ml-6 list-decimal">
-                        <li class="pl-2">
-                            <span class="font-semibold">制定AI战略</span>：评估您的业务流程，找出可以通过AI优化的环节。不要一味追求全面变革，而是找准关键点突破。
-                        </li>
-                        <li class="pl-2">
-                            <span class="font-semibold">培养AI思维</span>：鼓励团队思考"如果有AI协助，这项工作如何能做得更好？"将AI融入日常思考。
-                        </li>
-                        <li class="pl-2">
-                            <span class="font-semibold">小规模试点</span>：从一个明确的业务痛点开始，运用AI工具解决实际问题，验证价值后再扩大应用范围。
-                        </li>
-                        <li class="pl-2">
-                            <span class="font-semibold">赋能员工</span>：为员工提供AI工具的培训和支持，让他们成为变革的参与者而非旁观者。
-                        </li>
-                        <li class="pl-2">
-                            <span class="font-semibold">建立反馈循环</span>：定期评估AI应用效果，不断调整优化，确保价值最大化。
-                        </li>
-                    </ol>
-                </div>
-            </section>
-
-            <section class="mb-12">
-                <div class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl shadow-md p-8 text-white">
-                    <h2 class="text-2xl font-bold mb-6">决胜未来：领导者的责任</h2>
-
-                    <p class="mb-4">
-                        作为企业的领航者，您的决策将塑造企业的未来。在AI时代，领导力意味着：
+    <!-- 英雄区 -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2">
+                    <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+                        <span class="gradient-text">AI 赋能未来：</span>
+                        <br />开启你的一人公司新纪元
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        人工智能正在重塑商业格局，让个体创业者实现高效率、低成本运营。
+                        <strong>AI+一人公司</strong>，这是未来最具颠覆性的高潜力创业形态。
                     </p>
-
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle mt-1 mr-3 text-blue-200"></i>
-                            <span>敢于打破固有思维模式，重新思考业务的本质和价值创造方式</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle mt-1 mr-3 text-blue-200"></i>
-                            <span>提前布局，在AI浪潮中抢占先机，而不是等到被迫转型</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle mt-1 mr-3 text-blue-200"></i>
-                            <span>平衡短期投入与长期回报，有战略眼光和耐心</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle mt-1 mr-3 text-blue-200"></i>
-                            <span>在变革中关注人的因素，帮助团队适应新的工作方式</span>
-                        </li>
-                    </ul>
-
-                    <p class="text-lg font-semibold">
-                        记住：在AI时代，最大的风险不是尝试新事物的失败，而是不尝试的确定性落后。
-                    </p>
-                </div>
-            </section>
-
-            <section>
-                <div class="text-center p-8 bg-white rounded-xl shadow-md">
-                    <h2 class="text-3xl font-bold text-blue-700 mb-6">行动的时刻已经到来</h2>
-
-                    <p class="text-xl mb-8">
-                        这不是一场可以旁观的革命，<br>
-                        这是一次重塑商业未来的机会。<br>
-                        <strong class="text-blue-600">把握机遇，就在当下。</strong>
-                    </p>
-
-                    <a href="#" class="call-to-action inline-block py-4 px-10 rounded-full text-xl font-bold shadow-lg">
-                        开启您的AI之旅 <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="#action" class="btn-primary text-white px-8 py-4 rounded-full font-medium inline-block">
+                        立即开启你的 AI 创业之旅
+                        <i class="fas fa-arrow-right ml-2"></i>
                     </a>
+                </div>
+                <div class="lg:w-1/2 mt-10 lg:mt-0">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+                        alt="AI 创业" class="rounded-lg shadow-xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <p class="mt-6 text-gray-500">
-                        有疑问？需要定制AI解决方案？<br>
-                        <a href="#" class="text-blue-600 hover:underline">联系我们的专家团队</a>
+    <!-- 面临的挑战 -->
+    <section id="challenge" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                传统路径的困境，你是否也感同身受？
+            </h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm card">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-red-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">钱越来越难赚</h3>
+                    <p class="text-gray-600">
+                        经济环境不明朗，行业竞争激烈，"消费循环"增长乏力。在传统"打工模式"下，
+                        个人创造的大部分价值最终流向少数资本掌控者，让普通人越来越难以积累财富。
                     </p>
                 </div>
-            </section>
-        </main>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm card">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tachometer-alt text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">高收入陷阱</h3>
+                    <p class="text-gray-600">
+                        即使收入不低，高昂的生活成本（房租、教育、医疗等）也让人难以有效储蓄，
+                        时刻处于"奔跑状态"。现代社会中类似"弱民策略"和"利出一孔"的现象，
+                        让普通人始终处于"为生活所迫"的状态。
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm card">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-dice text-green-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">职业不确定性</h3>
+                    <p class="text-gray-600">
+                        技术革新速度加快，传统职业路径正在被颠覆。许多人对未来感到迷茫和焦虑，
+                        不知道应该如何规划自己的职业生涯，害怕自己的技能很快就会被淘汰。
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm card">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-blue-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">技术障碍</h3>
+                    <p class="text-gray-600">
+                        传统创业门槛高，需要技术团队、大量资金和复杂的基础设施。这使得大多数人
+                        只能依赖雇主提供的工作机会，难以实现真正的职业自由和财务独立。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <footer class="mt-12 text-center text-gray-500 text-sm">
-            <p>© 2023 AI赋能企业：战略与实践 | 助力企业在AI时代持续领先</p>
-        </footer>
+    <!-- 解决方案 -->
+    <section id="solution" class="py-16 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">
+                未来已来：AI 与一人公司的崛起
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                AI 是强大的"效率放大器"，让一个人能完成过去小团队才能做到的工作。
+                未来90%的公司将与AI相关，其中大部分将是一人公司形态。
+            </p>
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-4">
+                            什么是"AI+一人公司"？
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            "AI+一人公司"是将人工智能工具与个体创业相结合的新型商业模式，具有极高的灵活性、
+                            低成本和卓越的效率。这种模式让创业者能够以最小的资源投入，获得最大的产出。
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>降低创业门槛，减少资金需求</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>提高运营效率，自动化繁琐任务</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>灵活应对市场变化，快速调整方向</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>实现个人价值最大化，掌控自己的命运</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                            alt="AI 创业解决方案" class="rounded-lg w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 机遇与优势 -->
+    <section id="benefits" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">
+                AI 如何为你赋能，重塑你的职业可能？
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                在 AI 时代，成功更看重创意、执行力和管理能力，而非纯粹的技术背景。
+                现在就是抓住 AI 红利的最佳时机。
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-8 rounded-xl shadow-sm card">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">降低创业门槛</h3>
+                    <p class="text-gray-600">
+                        AI 能在市场调研、竞争对手分析、网站设计、内容创作等方面提供高效辅助，
+                        让你无需大量投资就能启动事业。从雇佣专业人员到使用 AI 工具，成本降低了 80% 以上。
+                    </p>
+                </div>
+
+                <div class="bg-purple-50 p-8 rounded-xl shadow-sm card">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">从消费者到生产者</h3>
+                    <p class="text-gray-600">
+                        AI 让你能够从单纯的"消费者"转变为"生产者"，这是摆脱经济困境、掌握主动权的关键。
+                        通过创造价值，建立自己的收入来源，你将不再受限于固定工资的束缚。
+                    </p>
+                </div>
+
+                <div class="bg-green-50 p-8 rounded-xl shadow-sm card">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-pie text-green-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">利用"信息差"获得先机</h3>
+                    <p class="text-gray-600">
+                        AI 领域对大多数人而言仍是新大陆，早期行动者将获得巨大优势。掌握 AI 应用的技能和知识，
+                        你可以在竞争相对较小的环境中建立自己的品牌和声誉。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 个人 IP -->
+    <section class="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">
+                引爆影响力：打造高价值个人 IP
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                在流量成本高昂的今天，个人 IP 是零成本或低成本获取高价值流量的强大工具。
+            </p>
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                            alt="个人IP建设" class="rounded-lg w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-4">
+                            为什么个人 IP 至关重要？
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            个人 IP 能帮助你建立信任、直接对接用户需求、降低推广成本，是数字时代的核心竞争力。
+                            AI 可以辅助你的内容创作（如视频脚本、文案、配图）和社群管理工作。
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-users text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">建立信任关系</h4>
+                                    <p class="text-gray-600">分享真实经历，展示专业知识，与受众建立情感连接。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-bullhorn text-purple-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">低成本获取流量</h4>
+                                    <p class="text-gray-600">通过个人影响力，减少对付费广告的依赖，降低获客成本。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-robot text-green-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">AI 辅助内容创作</h4>
+                                    <p class="text-gray-600">利用 AI 工具高效生产优质内容，保持持续输出和互动。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行动蓝图 -->
+    <section id="action" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">
+                三步启动你的 AI 个人事业
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                以下是你开始 AI 创业之旅的实战指南，从认知到执行，每一步都至关重要。
+            </p>
+
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 hidden md:block"></div>
+
+                <div class="space-y-12">
+                    <!-- 步骤 1 -->
+                    <div class="relative flex items-center md:flex-row flex-col">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <h3 class="text-xl font-semibold mb-3">认知与学习</h3>
+                            <p class="text-gray-600">快速掌握 AI 基础知识和常用工具的使用方法。关注主流 AI 工具如 ChatGPT、Midjourney、Claude
+                                等，了解它们的应用场景和局限性。</p>
+                        </div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center z-10 my-4 md:my-0">
+                            <span class="font-bold">1</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <div class="bg-blue-50 p-6 rounded-xl">
+                                <h4 class="font-semibold mb-2">学习资源</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>AI 工具使用指南和教程</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>Prompt 工程基础知识</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>AI 应用案例分析</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 步骤 2 -->
+                    <div class="relative flex items-center md:flex-row flex-col">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <div class="bg-purple-50 p-6 rounded-xl">
+                                <h4 class="font-semibold mb-2">如何定位</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center justify-end">
+                                        <span>回顾自己曾遇到的困惑和问题</span>
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                    </li>
+                                    <li class="flex items-center justify-end">
+                                        <span>分析自己的专业技能和兴趣</span>
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                    </li>
+                                    <li class="flex items-center justify-end">
+                                        <span>研究市场需求和趋势</span>
+                                        <i class="fas fa-check text-green-500 ml-2"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-purple-500 text-white flex items-center justify-center z-10 my-4 md:my-0">
+                            <span class="font-bold">2</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <h3 class="text-xl font-semibold mb-3">定位与深耕</h3>
+                            <p class="text-gray-600">找到自己擅长或感兴趣的垂直领域作为创业赛道。记住，你曾经遇到的困惑和问题，很可能就是他人的需求点，这些都可以成为你的创业机会。</p>
+                        </div>
+                    </div>
+
+                    <!-- 步骤 3 -->
+                    <div class="relative flex items-center md:flex-row flex-col">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <h3 class="text-xl font-semibold mb-3">实践与迭代</h3>
+                            <p class="text-gray-600">通过低成本、高效率的方式快速试错，找到可行的盈利路径。积极构建个人 IP，利用 AI
+                                放大你的解决方案和影响力。不要害怕失败，每次尝试都是宝贵的经验。</p>
+                        </div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center z-10 my-4 md:my-0">
+                            <span class="font-bold">3</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <div class="bg-green-50 p-6 rounded-xl">
+                                <h4 class="font-semibold mb-2">执行策略</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>设定可衡量的小目标</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>持续优化产品/服务</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>收集反馈，快速调整方向</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>建立自动化工作流</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 紧迫感与最终行动召唤 -->
+    <section class="py-16 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">
+                AI 浪潮已至，你还在观望吗？
+            </h2>
+            <p class="text-xl mb-10 max-w-3xl mx-auto">
+                AI 时代不等人，技术不再是唯一壁垒。行动越早，机会越大。
+                今天迈出的一小步，可能就是未来成功的关键。不要让犹豫成为你最大的遗憾。
+            </p>
+
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-2xl inline-block">
+                <h3 class="text-2xl font-semibold mb-4">立即开始，把握先机</h3>
+                <a href="#"
+                    class="bg-white text-indigo-600 px-8 py-4 rounded-full font-medium inline-block hover:bg-opacity-90 transition">
+                    获取 AI 实用工具清单
+                    <i class="fas fa-download ml-2"></i>
+                </a>
+                <p class="mt-4 text-sm opacity-80">
+                    或者 <a href="#" class="underline">加入我们的 AI 创业者社群</a>，与志同道合的伙伴一起成长
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <span class="text-2xl font-bold gradient-text">AI+一人公司</span>
+                    <p class="mt-2 text-gray-400 max-w-md">
+                        拥抱 AI 技术，赋能个体创业者，重塑未来商业模式。
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">探索</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#challenge" class="text-gray-400 hover:text-white">面临的挑战</a></li>
+                            <li><a href="#solution" class="text-gray-400 hover:text-white">解决方案</a></li>
+                            <li><a href="#benefits" class="text-gray-400 hover:text-white">机遇与优势</a></li>
+                            <li><a href="#action" class="text-gray-400 hover:text-white">行动蓝图</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">资源</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">AI 工具清单</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">创业指南</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">成功案例</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">常见问题</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">联系我们</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fab fa-weixin mr-2 text-gray-400"></i>
+                                <span class="text-gray-400">微信: AI_OneManCo</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                                <span class="text-gray-400">邮箱: contact@ai-onemancompany.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2023 AI+一人公司. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 词汇表弹窗 -->
+    <div id="glossary" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">核心概念解析</h3>
+                <button onclick="document.getElementById('glossary').classList.add('hidden')"
+                    class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <div class="space-y-6">
+                <div>
+                    <h4 class="text-lg font-semibold text-blue-600">消费循环</h4>
+                    <p class="text-gray-600">指经济中消费驱动生产，生产创造就业，就业带来收入，收入支持消费的循环。当这个循环增长乏力时，经济发展会受到制约。</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-blue-600">高收入陷阱</h4>
+                    <p class="text-gray-600">指即使拥有较高收入，但由于生活成本（房贷、教育、医疗等）同样高昂，实际可支配收入和储蓄能力有限的现象。</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-blue-600">AI+一人公司</h4>
+                    <p class="text-gray-600">一种将人工智能工具与个体创业相结合的新型商业模式，个体创业者利用 AI 工具提高效率，降低成本，实现小规模但高效益的商业运营。</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-blue-600">流量杠杆</h4>
+                    <p class="text-gray-600">指通过特定方式（如个人IP）吸引和累积受众注意力，并将这种注意力转化为商业价值的机制。个人IP作为流量杠杆，能以较低成本获取高质量流量。</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-blue-600">信息差</h4>
+                    <p class="text-gray-600">指不同群体之间对特定信息了解程度的差异。在新兴领域如AI应用中，掌握前沿知识的人可以利用这种信息差获得竞争优势。</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        // 添加词汇表按钮
+        const glossaryButton = document.createElement('button');
+        glossaryButton.className = 'fixed bottom-6 right-6 bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-blue-700 transition';
+        glossaryButton.innerHTML = '<i class="fas fa-book"></i>';
+        glossaryButton.onclick = function () {
+            document.getElementById('glossary').classList.remove('hidden');
+        };
+        document.body.appendChild(glossaryButton);
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
